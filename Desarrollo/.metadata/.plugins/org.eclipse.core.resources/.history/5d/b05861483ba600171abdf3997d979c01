@@ -69,22 +69,19 @@ public abstract class Unidad {
 	public abstract double getGastoEnergetico();
 	public abstract double getAtaque();
 	public abstract double getDefensa();	
-	public abstract double getAtaqueBase();
-	public abstract double getDefensaBase();
-	public abstract int getEnergiaMaxima();
-	
 	public boolean puedeRestauraEnergia(){
 		if(energia < getEnergiaMaxima())
 			return true;
 		return false;
 	}
 	
+	public abstract int getEnergiaMaxima();
+	
 	public void restaurarEnergia(){}
 	
 	public int getEnergia(){
 		return energia;
 	}
-	
 	public void setEnergia(int i) {
 		this.energia = i;	
 	}
@@ -92,6 +89,9 @@ public abstract class Unidad {
 	public double getSalud() {
 		return salud;
 	}
+	
+	public abstract double getAtaqueBase();
+	public abstract double getDefensaBase();
 
 	public final void retroceder() {
 		this.posicion--;
