@@ -1,0 +1,23 @@
+package personaje;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SoldadoTest {
+	private Unidad unidad;
+
+	@Test
+	public void crearSoldadoTest(){
+		unidad = new Soldado(0);
+		assertTrue(
+					Double.compare(unidad.getAtaque(),10) == 0 && 
+					Double.compare(unidad.getEnergia(), 100)==0 &&
+					Double.compare(unidad.getPosicion() ,0)==0 &&
+					Double.compare(unidad.getDefensa() ,1)==0 && 
+					Double.compare(unidad.getSalud(),200)==0
+				  );
+		assertTrue(false);
+	}
+		
+}

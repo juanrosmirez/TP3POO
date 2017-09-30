@@ -14,10 +14,21 @@ public class Escudo extends ItemDecorator {
 		return getPeleable().getEnergia();
 	}
 	public double getDefensa(){
-		return getPeleable().getDefensa() +  getPeleable().getDefensa()*0.4;
+		return getPeleable().getDefensa() +  getPeleable().getDefensaBase()*0.4;
 	}
 	public boolean puedeRestauraEnergia() {
 		return getPeleable().puedeRestauraEnergia();
 	}
 
+
+	@Override
+	public double getAtaqueBase() {
+		return getPeleable().getAtaqueBase();
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return getPeleable().getDefensaBase();
+	}
 }

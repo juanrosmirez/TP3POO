@@ -27,5 +27,17 @@ public class Lancero  extends Unidad{
 		return false;
 	}
 
+	@Override
+	public double getAtaqueBase() {
+		// TODO Auto-generated method stub
+		return 25;
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
 	
 }

@@ -8,7 +8,7 @@ public class Capa extends ItemDecorator {
 		super(peleable);
 	}
 	public double getAtaque(){
-		return getPeleable().getAtaque() - getPeleable().getAtaque() * 0.1  ;
+		return getPeleable().getAtaque() - getPeleable().getAtaqueBase() * 0.1  ;
 	}
 	public int getEnergia(){
 		return getPeleable().getEnergia() * 2;
@@ -18,5 +18,16 @@ public class Capa extends ItemDecorator {
 	}
 	public boolean puedeRestauraEnergia() {
 		return getPeleable().puedeRestauraEnergia();
+	}
+
+	@Override
+	public double getAtaqueBase() {
+		return getPeleable().getAtaqueBase();
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return getPeleable().getDefensaBase();
 	}
 }

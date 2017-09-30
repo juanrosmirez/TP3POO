@@ -58,5 +58,12 @@ public abstract class Unidad {
 	public void setEnergia(int i) {
 		this.energia = i;	
 	}
+
+	public double getSalud() {
+		return salud;
+	}
+	
+	public abstract double getAtaqueBase();
+	public abstract double getDefensaBase();
 	
 }

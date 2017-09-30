@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="item.Unidad"/>
+<fullyQualifiedTypeName name="personaje.Soldado"/>
+<fullyQualifiedTypeName name="item.equipamiento"/>
+<fullyQualifiedTypeName name="item.Personaje"/>
+<fullyQualifiedTypeName name="item.Peleable"/>
+<fullyQualifiedTypeName name="personaje.Unidad"/>
+<fullyQualifiedTypeName name="item.Escudo"/>
+<fullyQualifiedTypeName name="item.Capa"/>
+<fullyQualifiedTypeName name="item.Puñal"/>
+<fullyQualifiedTypeName name="personaje.Arquero"/>
+</qualifiedTypeNameHistroy>

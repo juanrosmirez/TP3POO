@@ -31,4 +31,15 @@ public class Soldado extends Unidad{
 	public void restaurarEnergia() {
 		super.setEnergia(100);
 	}
+
+	@Override
+	public double getAtaqueBase() {
+		return 10;
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
 }

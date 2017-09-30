@@ -31,5 +31,16 @@ public class Caballero  extends Unidad{
 		super.setEnergia(super.getEnergia()+3);
 		
 	}
+	@Override
+	public double getAtaqueBase() {
+		// TODO Auto-generated method stub
+		return 50;
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

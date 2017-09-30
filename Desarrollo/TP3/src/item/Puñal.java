@@ -19,4 +19,16 @@ public class Puñal extends ItemDecorator {
 	public boolean puedeRestauraEnergia() {
 		return getPeleable().puedeRestauraEnergia();
 	}
+	
+
+	@Override
+	public double getAtaqueBase() {
+		return getPeleable().getAtaqueBase();
+	}
+
+	@Override
+	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return getPeleable().getDefensaBase();
+	}
 }
