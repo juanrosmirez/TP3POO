@@ -11,7 +11,7 @@ import item.Puñal;
 public class SoldadoTest {
 	private final double ATAQUE = 10;
 	private final double SALUD = 200;
-	private final double ENERGIA = 100;
+	private final double ENERGIA = 10;
 	private final double DEFENSA = 1;
 
 	private Unidad unidad;

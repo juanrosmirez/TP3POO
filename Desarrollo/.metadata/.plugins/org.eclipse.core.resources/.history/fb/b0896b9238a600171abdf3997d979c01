@@ -1,16 +1,15 @@
 package personaje;
 
-public class Soldado extends Unidad{
-
+public class Caballero  extends Unidad{
 	private static final int SALUD = 200;
-	private static final int ENERGIA = 100;
-	private static final int ATAQUE = 10;
+	private static final int ENERGIA = 3;
+	private static final int ATAQUE = 50;
 	private static final int DEFENSA = 1;
 	
-	public Soldado(int posicion){
-		super(SALUD,posicion,ENERGIA);
+	public Caballero(int posicion){
+		super(SALUD, posicion,ENERGIA);
 	}
-
+	
 	@Override
 	public double getAtaque() {
 		return ATAQUE;
@@ -24,7 +23,7 @@ public class Soldado extends Unidad{
 	@Override
 	public boolean puedoAtacar(Unidad u){
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
-		return super.puedoAtacar(u) && distancia ==0;
+		return super.puedoAtacar(u) && distancia >= 1 && distancia <= 2 ;
 	}
 
 	@Override
@@ -34,9 +33,12 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(ENERGIA);
+		int e = super.getEnergia()+3;
+		if(e>ENERGIA)
+			e= ENERGIA;
+		super.setEnergia(e);
+		
 	}
-
 	@Override
 	public double getAtaqueBase() {
 		return ATAQUE;
@@ -44,14 +46,12 @@ public class Soldado extends Unidad{
 
 	@Override
 	public double getDefensaBase() {
-		// TODO Auto-generated method stub
 		return DEFENSA;
 	}
 
 	@Override
 	public double getGastoEnergetico() {
-		return 10;
+		return 1;
 	}
 
-	
 }

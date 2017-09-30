@@ -1,18 +1,23 @@
 package personaje;
 
 public class Caballero  extends Unidad{
+	private static final int SALUD = 200;
+	private static final int ENERGIA = 3;
+	private static final int ATAQUE = 50;
+	private static final int DEFENSA = 1;
+	
 	public Caballero(int posicion){
-		super(200, posicion,3);
+		super(SALUD, posicion,ENERGIA);
 	}
 	
 	@Override
 	public double getAtaque() {
-		return 50;
+		return ATAQUE;
 	}
 
 	@Override
 	public double getDefensa() {
-		return 1;
+		return DEFENSA;
 	}
 
 	@Override
@@ -29,26 +34,24 @@ public class Caballero  extends Unidad{
 	@Override
 	public void restaurarEnergia() {
 		int e = super.getEnergia()+3;
-		if(e>3)
-			e= 3;
+		if(e>ENERGIA)
+			e= ENERGIA;
 		super.setEnergia(e);
 		
 	}
+	
 	@Override
 	public double getAtaqueBase() {
-		// TODO Auto-generated method stub
-		return 50;
+		return ATAQUE;
 	}
 
 	@Override
 	public double getDefensaBase() {
-		// TODO Auto-generated method stub
-		return 1;
+		return DEFENSA;
 	}
 
 	@Override
 	public double getGastoEnergetico() {
-		// TODO Auto-generated method stub
 		return 1;
 	}
 

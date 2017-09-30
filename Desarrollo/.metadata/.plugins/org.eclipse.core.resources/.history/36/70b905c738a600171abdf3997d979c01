@@ -3,7 +3,7 @@ package personaje;
 public class Soldado extends Unidad{
 
 	private static final int SALUD = 200;
-	private static final int ENERGIA = 100;
+	private static final int ENERGIA = 10;
 	private static final int ATAQUE = 10;
 	private static final int DEFENSA = 1;
 	
@@ -50,7 +50,7 @@ public class Soldado extends Unidad{
 
 	@Override
 	public double getGastoEnergetico() {
-		return 10;
+		return 1;
 	}
 
 	

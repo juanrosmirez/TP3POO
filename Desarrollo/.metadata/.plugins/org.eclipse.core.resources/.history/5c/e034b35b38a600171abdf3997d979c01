@@ -2,23 +2,18 @@ package personaje;
 
 public class Soldado extends Unidad{
 
-	private static final int SALUD = 200;
-	private static final int ENERGIA = 100;
-	private static final int ATAQUE = 10;
-	private static final int DEFENSA = 1;
-	
 	public Soldado(int posicion){
-		super(SALUD,posicion,ENERGIA);
+		super(200,posicion,10);
 	}
 
 	@Override
 	public double getAtaque() {
-		return ATAQUE;
+		return 10;
 	}
 
 	@Override
 	public double getDefensa() {
-		return DEFENSA;
+		return 1;
 	}
 
 	@Override
@@ -34,23 +29,23 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(ENERGIA);
+		super.setEnergia(10);
 	}
 
 	@Override
 	public double getAtaqueBase() {
-		return ATAQUE;
+		return 10;
 	}
 
 	@Override
 	public double getDefensaBase() {
 		// TODO Auto-generated method stub
-		return DEFENSA;
+		return 1;
 	}
 
 	@Override
 	public double getGastoEnergetico() {
-		return 10;
+		return 1;
 	}
 
 	

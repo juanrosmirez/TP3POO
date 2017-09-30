@@ -2,18 +2,23 @@ package personaje;
 
 
 public class Arquero extends Unidad {
+	private static final int SALUD = 50;
+	private static final int ENERGIA = 20;
+	private static final int ATAQUE = 5;
+	private static final int DEFENSA = 1;
+	
 	public Arquero(int posicion) {
-		super(50, posicion,20);
+		super(SALUD, posicion,ENERGIA);
 	}
 
 	@Override
 	public double getAtaque() {
-		return 5;
+		return ATAQUE;
 	}
 
 	@Override
 	public double getDefensa() {
-		return 1;
+		return DEFENSA;
 	}
 	
 	@Override
@@ -29,27 +34,25 @@ public class Arquero extends Unidad {
 
 	@Override
 	public void restaurarEnergia() {
-		int e = super.getEnergia()+6;
-		if(e>20)
-			e= 20;
+		int e = super.getEnergia() + 6;
+		if(e > ENERGIA)
+			e = ENERGIA;
 		super.setEnergia(e);
 		
 	}
+	
 	@Override
 	public double getAtaqueBase() {
-		// TODO Auto-generated method stub
-		return 5;
+		return ATAQUE;
 	}
 
 	@Override
 	public double getDefensaBase() {
-		// TODO Auto-generated method stub
-		return 1;
+		return DEFENSA;
 	}
 
 	@Override
 	public double getGastoEnergetico() {
-		// TODO Auto-generated method stub
 		return 1;
 	}
 	

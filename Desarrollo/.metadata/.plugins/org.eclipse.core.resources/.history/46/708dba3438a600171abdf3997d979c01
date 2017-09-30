@@ -1,23 +1,19 @@
 package personaje;
 
 public class Lancero  extends Unidad{
-	private static final int SALUD = 150;
-	private static final int ENERGIA = 1;
-	private static final int ATAQUE = 25;
-	private static final int DEFENSA = 1;
 
 	public Lancero(int posicion){
-		super(SALUD,posicion,ENERGIA);
+		super(150,posicion,1);
 	}
 	
 	@Override
 	public double getAtaque() {
-		return ATAQUE;
+		return 25;
 	}
 
 	@Override
 	public double getDefensa() {
-		return DEFENSA;
+		return 1;
 	}
 	
 	@Override
@@ -34,13 +30,13 @@ public class Lancero  extends Unidad{
 	@Override
 	public double getAtaqueBase() {
 		// TODO Auto-generated method stub
-		return ATAQUE;
+		return 25;
 	}
 
 	@Override
 	public double getDefensaBase() {
 		// TODO Auto-generated method stub
-		return DEFENSA;
+		return 1;
 	}
 
 	@Override

@@ -4,7 +4,6 @@ import personaje.Unidad;
 
 public class Capa extends ItemDecorator {
 	
-	
 	public Capa(Unidad peleable){
 		super(peleable);
 	}
