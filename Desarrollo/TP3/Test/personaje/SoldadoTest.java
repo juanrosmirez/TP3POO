@@ -228,6 +228,7 @@ public class SoldadoTest {
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Soldado(1);
+		unidad.atacar(new Soldado(1));
 		assertTrue(unidad.puedeRestauraEnergia());
 	}
 
@@ -334,5 +335,14 @@ public class SoldadoTest {
 		assertEquals(unidad.atacar(victima), 0, 0.1);
 		
 	}
+
+	@Test
+	public void noReponerEnergiaSiEstaAlPalo(){
+		unidad = new Soldado(1);
+		assertFalse(unidad.puedeRestauraEnergia());
+		
+	}
+
+	
 	
 }

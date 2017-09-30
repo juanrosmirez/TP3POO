@@ -29,12 +29,13 @@ public class Soldado extends Unidad{
 
 	@Override
 	public boolean puedeRestauraEnergia() {
-		return true;
+		return super.puedeRestauraEnergia();
 	}
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(ENERGIA);
+		if(puedeRestauraEnergia())
+			super.setEnergia(ENERGIA);
 	}
 
 	@Override
@@ -46,6 +47,12 @@ public class Soldado extends Unidad{
 	public double getDefensaBase() {
 		// TODO Auto-generated method stub
 		return DEFENSA;
+	}
+	
+	@Override
+	public int getEnergiaMaxima() {
+		// TODO Auto-generated method stub
+		return ENERGIA;
 	}
 
 	@Override

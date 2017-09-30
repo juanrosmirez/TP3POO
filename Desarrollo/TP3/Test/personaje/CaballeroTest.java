@@ -237,6 +237,7 @@ public class CaballeroTest {
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Caballero(1);
+		unidad.atacar(new Soldado(2));
 		assertTrue(unidad.puedeRestauraEnergia());
 	}
 

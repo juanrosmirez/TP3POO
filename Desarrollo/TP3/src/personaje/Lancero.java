@@ -49,5 +49,10 @@ public class Lancero  extends Unidad{
 		return 0;
 	}
 
-	
+
+	@Override
+	public int getEnergiaMaxima() {
+		// TODO Auto-generated method stub
+		return ENERGIA;
+	}
 }

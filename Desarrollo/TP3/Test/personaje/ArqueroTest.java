@@ -238,6 +238,7 @@ public class ArqueroTest {
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Arquero(1);
+		unidad.atacar(new Soldado(3));
 		assertTrue(unidad.puedeRestauraEnergia());
 	}
 

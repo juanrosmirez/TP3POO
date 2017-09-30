@@ -69,7 +69,13 @@ public abstract class Unidad {
 	public abstract double getGastoEnergetico();
 	public abstract double getAtaque();
 	public abstract double getDefensa();	
-	public abstract boolean puedeRestauraEnergia();
+	public boolean puedeRestauraEnergia(){
+		if(energia < getEnergiaMaxima())
+			return true;
+		return false;
+	}
+	
+	public abstract int getEnergiaMaxima();
 	
 	public void restaurarEnergia(){}
 	

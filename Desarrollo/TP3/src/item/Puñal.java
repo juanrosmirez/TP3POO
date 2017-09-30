@@ -33,7 +33,11 @@ public class Puñal extends ItemDecorator {
 	}
 	@Override
 	public double getGastoEnergetico() {
+		return getPeleable().getGastoEnergetico();
+	}
+	@Override
+	public int getEnergiaMaxima() {
 		// TODO Auto-generated method stub
-		return 0;
+		return getPeleable().getEnergiaMaxima();
 	}
 }

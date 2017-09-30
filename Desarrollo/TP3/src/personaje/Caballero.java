@@ -28,11 +28,14 @@ public class Caballero  extends Unidad{
 
 	@Override
 	public boolean puedeRestauraEnergia() {
-		return true;
+		return super.puedeRestauraEnergia();
 	}
 
 	@Override
 	public void restaurarEnergia() {
+		if(!puedeRestauraEnergia())
+			return;
+		
 		int e = super.getEnergia()+3;
 		if(e>ENERGIA)
 			e= ENERGIA;
@@ -55,4 +58,9 @@ public class Caballero  extends Unidad{
 		return 1;
 	}
 
+	@Override
+	public int getEnergiaMaxima() {
+		// TODO Auto-generated method stub
+		return ENERGIA;
+	}
 }
