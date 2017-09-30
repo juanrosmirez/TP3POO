@@ -1,5 +1,6 @@
 package personaje;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -210,4 +211,28 @@ public class CaballeroTest {
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
+	
+
+	@Test
+	public void distanciaNoValidaParaCombate(){
+		Unidad u1 = new Caballero(0);
+		Unidad u2 = new Soldado(3);
+		assertFalse(u1.puedoAtacar(u2));
+		u1 = new Caballero(0);
+		u2 = new Arquero(0);
+		assertFalse(u1.puedoAtacar(u2));
+	}
+	
+	@Test
+	public void distanciaValidaParaCombate(){
+		Unidad u1 = new Caballero(5);
+		Unidad u2 = new Soldado(6);
+
+		for(int i=0 ; i<2; i++){
+			assertTrue(u1.puedoAtacar(u2));
+			u2.avanzar();
+		}
+	}
+	
+	
 }

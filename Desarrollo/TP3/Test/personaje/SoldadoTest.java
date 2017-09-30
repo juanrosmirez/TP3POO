@@ -210,5 +210,19 @@ public class SoldadoTest {
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
+
+	@Test
+	public void distanciaNoValidaParaCombate(){
+		Unidad u1 = new Soldado(4);
+		Unidad u2 = new Soldado(100);
+		assertFalse(u1.puedoAtacar(u2));
+	}
+	
+	@Test
+	public void distanciaValidaParaCombate(){
+		Unidad u1 = new Soldado(2);
+		Unidad u2 = new Soldado(2);
+		assertTrue(u1.puedoAtacar(u2));
+	}
 	
 }

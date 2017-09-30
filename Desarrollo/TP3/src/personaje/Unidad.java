@@ -65,5 +65,12 @@ public abstract class Unidad {
 	
 	public abstract double getAtaqueBase();
 	public abstract double getDefensaBase();
+
+	public final void retroceder() {
+		this.posicion--;
+	}
+	public final void avanzar() {
+		this.posicion++;
+	}
 	
 }

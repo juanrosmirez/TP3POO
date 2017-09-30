@@ -210,4 +210,30 @@ public class ArqueroTest {
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
+
+	@Test
+	public void distanciaNoValidaParaCombate(){
+		Unidad u1 = new Arquero(0);
+		Unidad u2 = new Soldado(6);
+		assertFalse(u1.puedoAtacar(u2));
+		u1 = new Arquero(0);
+		u2 = new Arquero(1);
+		assertFalse(u1.puedoAtacar(u2));
+		u1 = new Arquero(1);
+		u2 = new Arquero(1);
+		assertFalse(u1.puedoAtacar(u2));
+	}
+	
+	@Test
+	public void distanciaValidaParaCombate(){
+		Unidad u1 = new Arquero(5);
+		Unidad u2 = new Soldado(7);
+
+		for(int i=0 ; i<4; i++){
+			assertTrue(u1.puedoAtacar(u2));
+			u2.avanzar();
+		}
+	}
+	
+
 }
