@@ -5,7 +5,7 @@ import item.Personaje;
 public class Lancero  extends Unidad{
 
 	public Lancero(int posicion){
-		super(150,posicion,1);
+		super(150,posicion,1,new Personaje(25,0));
 	}
 	
 	@Override
@@ -17,16 +17,6 @@ public class Lancero  extends Unidad{
 	@Override
 	public boolean puedeRestauraEnergia() {
 		return false;
-	}
-
-	@Override
-	public double getAtaque() {
-		return 25;
-	}
-
-	@Override
-	public double getDefensa() {
-		return 1;
 	}
 
 

@@ -7,9 +7,7 @@ public class juego {
 	public static void main(String[] args) {
 		
 		Personaje u1 = new Personaje(new Soldado(200));
-		Personaje u2 = new Personaje(new Soldado(200));
-		
-		
+		Unidad u2;
 		
 		System.out.println(u1.puedoAtacar(u2));
 		System.out.println(u2.conVida());

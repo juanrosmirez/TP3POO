@@ -45,7 +45,6 @@ public abstract class Unidad implements Peleable{
 	
 	public abstract double getAtaque();
 	public abstract double getDefensa();	
-	
 	public int getEnergia(){
 		return energia;
 	}

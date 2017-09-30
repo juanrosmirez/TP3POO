@@ -1,4 +1,3 @@
-import item.Personaje;
 import personaje.Soldado;
 import personaje.Unidad;
 
@@ -6,10 +5,12 @@ public class juego {
 
 	public static void main(String[] args) {
 		
-		Personaje u1 = new Personaje(new Soldado(200));
-		Personaje u2 = new Personaje(new Soldado(200));
+		Unidad u1 = new Soldado(9);
+		Unidad u2 = new Soldado(9);
 		
-		
+		u2.equiparEscudo();
+		u1.equiparPunial();
+		u1.equiparCapa();
 		
 		System.out.println(u1.puedoAtacar(u2));
 		System.out.println(u2.conVida());

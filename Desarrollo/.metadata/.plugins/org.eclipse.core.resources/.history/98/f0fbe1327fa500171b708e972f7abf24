@@ -26,7 +26,7 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(100);
+		super.equipamiento().setEnergia(100);
 	}
 
 

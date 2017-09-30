@@ -1,11 +1,11 @@
 package personaje;
 
-import item.Personaje;
+import item.Equipo;
 
 public class Lancero  extends Unidad{
 
 	public Lancero(int posicion){
-		super(150,posicion,1);
+		super(150,posicion,new Equipo(25,0,1));
 	}
 	
 	@Override
@@ -17,16 +17,6 @@ public class Lancero  extends Unidad{
 	@Override
 	public boolean puedeRestauraEnergia() {
 		return false;
-	}
-
-	@Override
-	public double getAtaque() {
-		return 25;
-	}
-
-	@Override
-	public double getDefensa() {
-		return 1;
 	}
 
 

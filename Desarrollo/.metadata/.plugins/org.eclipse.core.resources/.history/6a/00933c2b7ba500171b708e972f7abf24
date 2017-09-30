@@ -4,37 +4,40 @@ import item.Capa;
 import item.Escudo;
 import item.Peleable;
 import item.Puñal;
-import item.Personaje;
+import item.Equipo;
 
-public abstract class Unidad implements Peleable{
+public abstract class Unidad{
 
+	private double salud;
 	private int posicion;
 	
-	private double salud;
-	private int energia;
+	private Peleable equipo;
 	
+	public final void equiparEscudo(){
+		equipo = new Escudo(equipo);
+	}
+	public final void equiparPunial(){
+		equipo = new Puñal(equipo);
+	}
+	public final void equiparCapa(){
+		equipo = new Capa(equipo);
+	}
 	
-	public Unidad(int salud, int posicion,int energia){
+	public Unidad(int salud, int posicion, Equipo equipo){
 		this.salud = salud;
 		this.posicion = posicion;
-		this.energia = energia;
+		this.equipo = equipo;
 	}
 	
-	public Unidad(Unidad unidad) {
-		this.salud = unidad.salud;
-		this.posicion = unidad.posicion;
-		this.energia = unidad.energia;
-	}
-
 	public final double atacar(Unidad u){
 		if (!puedoAtacar(u))
 			return 0;
 		
-		return u.recibirDanio(getAtaque());
+		return u.recibirDanio(this.equipo.getAtaque());
 	}
 	
 	public final double recibirDanio(double valor){
-		double valorAtaqueFinal = valor - getDefensa();
+		double valorAtaqueFinal = valor - equipo.getDefensa();
 		if(valorAtaqueFinal < 0 )
 			valorAtaqueFinal = 0;
 		
@@ -43,20 +46,13 @@ public abstract class Unidad implements Peleable{
 		return valorAtaqueFinal;
 	}
 	
-	public abstract double getAtaque();
-	public abstract double getDefensa();	
-	
-	public int getEnergia(){
-		return energia;
-	}
-	
-	
+
 	public final int getPosicion(){
 		return posicion;
 	}
 
 	public boolean puedoAtacar(Unidad u){
-		if(getEnergia()<=0)
+		if(equipo.getEnergia()<=0)
 			return false;
 		return true;
 	}
@@ -70,10 +66,8 @@ public abstract class Unidad implements Peleable{
 	{
 		return salud > 0;
 	}
-
-	public void setEnergia(int i) {
-		this.energia = i;
-		
-	}
 	
+	public Equipo equipamiento() {
+		return (item.Equipo) equipo;
+	}		
 }

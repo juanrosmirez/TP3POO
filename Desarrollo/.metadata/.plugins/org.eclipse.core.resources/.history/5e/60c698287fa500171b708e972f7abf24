@@ -1,22 +1,17 @@
 package personaje;
 
-import item.Escudo;
-import item.Peleable;
-import item.Puñal;
 import item.Personaje;
 
-public class Soldado extends Unidad{
-
-	public Soldado(int posicion){
-		super(200,posicion,100);
+public class Caballero  extends Unidad{
+	public Caballero(int posicion){
+		super(200, posicion,3);
 	}
 	
 	
-
 	@Override
 	public boolean puedoAtacar(Unidad u){
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
-		return super.puedoAtacar(u) && distancia ==0;
+		return super.puedoAtacar(u) && distancia >= 1 && distancia <= 2 ;
 	}
 
 	@Override
@@ -26,25 +21,18 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(100);
+		super.equipamiento().setEnergia(super.equipamiento().getEnergia()+3);
+		
 	}
-
-
-
-
 	@Override
 	public double getAtaque() {
-		return 10;
+		return 50;
 	}
-	
-
-
 
 	@Override
 	public double getDefensa() {
-		return 1;
+		return 0;
 	}
 
-	
-	
+
 }

@@ -20,12 +20,6 @@ public abstract class Unidad implements Peleable{
 		this.energia = energia;
 	}
 	
-	public Unidad(Unidad unidad) {
-		this.salud = unidad.salud;
-		this.posicion = unidad.posicion;
-		this.energia = unidad.energia;
-	}
-
 	public final double atacar(Unidad u){
 		if (!puedoAtacar(u))
 			return 0;
@@ -45,7 +39,6 @@ public abstract class Unidad implements Peleable{
 	
 	public abstract double getAtaque();
 	public abstract double getDefensa();	
-	
 	public int getEnergia(){
 		return energia;
 	}
@@ -72,7 +65,7 @@ public abstract class Unidad implements Peleable{
 	}
 
 	public void setEnergia(int i) {
-		this.energia = i;
+		this.energia = energia;
 		
 	}
 	
