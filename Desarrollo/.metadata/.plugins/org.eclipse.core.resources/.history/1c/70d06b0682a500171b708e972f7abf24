@@ -7,9 +7,9 @@ public class Personaje extends Unidad {
 	private Unidad unidad;
 	
 	
-	public Personaje() {
-		super();
-		this.unidad = this;
+	public Personaje(Unidad unidad) {
+		super(unidad);
+		this.unidad = unidad;
 	}
 
 	@Override

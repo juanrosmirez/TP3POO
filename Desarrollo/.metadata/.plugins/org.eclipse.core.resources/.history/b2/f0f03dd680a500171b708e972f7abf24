@@ -2,14 +2,14 @@ package item;
 
 import personaje.Unidad;
 
-public class Personaje extends Unidad {	
+public class Personaje extends Unidad implements Peleable{	
 
 	private Unidad unidad;
 	
 	
-	public Personaje() {
-		super();
-		this.unidad = this;
+	public Personaje(Unidad unidad) {
+		super(unidad);
+		this.unidad = unidad;
 	}
 
 	@Override

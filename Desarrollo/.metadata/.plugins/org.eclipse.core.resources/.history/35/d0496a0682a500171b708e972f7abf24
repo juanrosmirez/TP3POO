@@ -1,5 +1,3 @@
-import item.Capa;
-import item.Peleable;
 import item.Personaje;
 import personaje.Soldado;
 import personaje.Unidad;
@@ -8,10 +6,9 @@ public class juego {
 
 	public static void main(String[] args) {
 		
-		Peleable u1 = new Soldado(200);
-		u1 = new Capa(u1);
-		Peleable u2 = new Soldado(200);
-		u1 = new Capa(u1);
+		Personaje u1 = new Personaje(new Soldado(200));
+		Personaje u2 = new Personaje(new Soldado(200));
+		
 		
 		
 		System.out.println(u1.puedoAtacar(u2));

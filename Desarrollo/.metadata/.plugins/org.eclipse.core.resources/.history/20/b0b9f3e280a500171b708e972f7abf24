@@ -1,6 +1,10 @@
 package personaje;
 
+import item.Capa;
+import item.Escudo;
 import item.Peleable;
+import item.Puñal;
+import item.Personaje;
 
 public abstract class Unidad implements Peleable{
 
