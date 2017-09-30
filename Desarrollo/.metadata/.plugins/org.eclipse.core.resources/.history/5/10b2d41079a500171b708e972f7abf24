@@ -4,7 +4,7 @@ import item.Capa;
 import item.Escudo;
 import item.Peleable;
 import item.Puñal;
-import item.Equipo;
+import item.equipamiento;
 
 public abstract class Unidad{
 
@@ -13,17 +13,17 @@ public abstract class Unidad{
 	
 	private Peleable equipo;
 	
-	public final void equiparEscudo(){
+	public void equiparEscudo(){
 		equipo = new Escudo(equipo);
 	}
-	public final void equiparPunial(){
+	public void equiparPunial(){
 		equipo = new Puñal(equipo);
 	}
-	public final void equiparCapa(){
+	public void equiparCapa(){
 		equipo = new Capa(equipo);
 	}
 	
-	public Unidad(int salud, int posicion, Equipo equipo){
+	public Unidad(int salud, int posicion, equipamiento equipo){
 		this.salud = salud;
 		this.posicion = posicion;
 		this.equipo = equipo;
@@ -66,9 +66,8 @@ public abstract class Unidad{
 	{
 		return salud > 0;
 	}
-	
-	public Equipo equipamiento() {
-		return (item.Equipo) equipo;
+	public equipamiento equipamiento() {
+		return (item.equipamiento) equipo;
 	}
 
 

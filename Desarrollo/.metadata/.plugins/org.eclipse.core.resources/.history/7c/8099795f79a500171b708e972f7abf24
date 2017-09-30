@@ -1,11 +1,11 @@
 package personaje;
 
-import item.Equipo;
+import item.equipamiento;
 
 public class Lancero  extends Unidad{
 
 	public Lancero(int posicion){
-		super(150,posicion,new Equipo(25,0,1));
+		super(150,posicion,new equipamiento(25,0,1));
 	}
 	
 	@Override

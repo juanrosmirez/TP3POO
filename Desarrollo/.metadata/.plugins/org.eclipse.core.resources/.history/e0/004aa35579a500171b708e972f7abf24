@@ -1,6 +1,6 @@
 package item;
 
-public class Capa extends EquipoDecorator {
+public class Capa extends UnidadDecorator {
 	
 	public Capa(Peleable peleable){
 		super(peleable);

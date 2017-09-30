@@ -3,12 +3,12 @@ package personaje;
 import item.Escudo;
 import item.Peleable;
 import item.Puñal;
-import item.Equipo;
+import item.equipamiento;
 
 public class Soldado extends Unidad{
 
 	public Soldado(int posicion){
-		super(200,posicion, new Equipo(10,1,10));
+		super(200,posicion, new equipamiento(10,1,10));
 	}
 	
 

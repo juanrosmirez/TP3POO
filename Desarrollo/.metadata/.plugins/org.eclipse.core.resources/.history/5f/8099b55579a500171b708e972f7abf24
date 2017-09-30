@@ -1,6 +1,6 @@
 package item;
 
-public class Puñal extends EquipoDecorator {
+public class Puñal extends UnidadDecorator {
 	
 	public Puñal(Peleable peleable){
 		super(peleable);

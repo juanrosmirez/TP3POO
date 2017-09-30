@@ -1,10 +1,10 @@
 package personaje;
 
-import item.equipamiento;
+import item.Equipo;
 
 public class Arquero extends Unidad {
 	public Arquero(int posicion) {
-		super(50, posicion,new equipamiento(5,0,20));
+		super(50, posicion,new Equipo(5,0,20));
 	}
 
 

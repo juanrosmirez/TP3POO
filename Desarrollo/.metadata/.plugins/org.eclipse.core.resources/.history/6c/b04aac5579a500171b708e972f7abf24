@@ -1,6 +1,6 @@
 package item;
 
-public class Escudo extends EquipoDecorator {
+public class Escudo extends UnidadDecorator {
 	
 	public Escudo(Peleable peleable){
 		super(peleable);
