@@ -1,18 +1,11 @@
 package personaje;
 
-import item.Personaje;
 
 public class Arquero extends Unidad {
 	public Arquero(int posicion) {
 		super(50, posicion,20);
 	}
 
-
-	@Override
-	public boolean puedoAtacar(Unidad u){
-		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
-		return super.puedoAtacar(u) && distancia >= 2 && distancia <= 5 ;
-	}
 
 	@Override
 	public boolean puedeRestauraEnergia() {
@@ -33,6 +26,22 @@ public class Arquero extends Unidad {
 	public double getDefensa() {
 		return 0;
 	}
+
+
+	@Override
+	public boolean puedoAtacar(Unidad u) {
+		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
+		return super.puedoAtacar(u) && distancia >= 2 && distancia <= 5 ;
+	}
+
+
+	@Override
+	public boolean conVida() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
 
 
 

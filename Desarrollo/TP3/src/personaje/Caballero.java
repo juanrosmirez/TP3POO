@@ -1,7 +1,5 @@
 package personaje;
 
-import item.Personaje;
-
 public class Caballero  extends Unidad{
 	public Caballero(int posicion){
 		super(200, posicion,3);
@@ -33,6 +31,7 @@ public class Caballero  extends Unidad{
 	public double getDefensa() {
 		return 0;
 	}
+
 
 
 }

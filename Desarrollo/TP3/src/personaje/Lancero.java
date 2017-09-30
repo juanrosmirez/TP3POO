@@ -1,6 +1,5 @@
 package personaje;
 
-import item.Personaje;
 
 public class Lancero  extends Unidad{
 

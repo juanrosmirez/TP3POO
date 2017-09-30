@@ -1,8 +1,7 @@
 package personaje;
 
-import item.Peleable;
 
-public abstract class Unidad implements Peleable{
+public abstract class Unidad {
 
 	private int posicion;
 	
@@ -22,11 +21,11 @@ public abstract class Unidad implements Peleable{
 		this.energia = unidad.energia;
 	}
 
-	public final double atacar(Unidad u){
-		if (!puedoAtacar(u))
+	public final double atacar(Unidad u2){
+		if (!puedoAtacar(u2))
 			return 0;
 		
-		return u.recibirDanio(getAtaque());
+		return ((Unidad) u2).recibirDanio(getAtaque());
 	}
 	
 	public final double recibirDanio(double valor){

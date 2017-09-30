@@ -1,8 +1,10 @@
 package item;
 
+import personaje.Unidad;
+
 public class Capa extends EquipoDecorator {
 	
-	public Capa(Peleable peleable){
+	public Capa(Unidad peleable){
 		super(peleable);
 	}
 	public double getAtaque(){
@@ -13,5 +15,9 @@ public class Capa extends EquipoDecorator {
 	}
 	public double getDefensa(){
 		return getPeleable().getDefensa();
+	}
+	public boolean puedeRestauraEnergia() {
+		// TODO Auto-generated method stub
+		return getPeleable().puedeRestauraEnergia();
 	}
 }

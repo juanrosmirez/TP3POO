@@ -1,8 +1,10 @@
 package item;
 
+import personaje.Unidad;
+
 public class Escudo extends EquipoDecorator {
 	
-	public Escudo(Peleable peleable){
+	public Escudo(Unidad peleable){
 		super(peleable);
 	}
 	public double getAtaque(){
@@ -13,6 +15,10 @@ public class Escudo extends EquipoDecorator {
 	}
 	public double getDefensa(){
 		return getPeleable().getDefensa() +  getPeleable().getDefensa()*0.4;
+	}
+	public boolean puedeRestauraEnergia() {
+		// TODO Auto-generated method stub
+		return getPeleable().puedeRestauraEnergia();
 	}
 
 }

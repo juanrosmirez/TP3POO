@@ -1,8 +1,10 @@
 package item;
 
+import personaje.Unidad;
+
 public class Puñal extends EquipoDecorator {
 	
-	public Puñal(Peleable peleable){
+	public Puñal(Unidad peleable){
 		super(peleable);
 	}
 	public double getAtaque(){
@@ -13,5 +15,9 @@ public class Puñal extends EquipoDecorator {
 	}
 	public double getDefensa(){
 		return getPeleable().getDefensa()-3;
+	}
+	public boolean puedeRestauraEnergia() {
+		// TODO Auto-generated method stub
+		return getPeleable().puedeRestauraEnergia();
 	}
 }

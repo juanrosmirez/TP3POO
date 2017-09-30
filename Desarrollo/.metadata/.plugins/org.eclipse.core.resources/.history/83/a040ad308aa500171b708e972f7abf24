@@ -1,0 +1,59 @@
+package item;
+
+
+public class EquipoDecorator implements Peleable {
+	private Peleable peleable;
+	
+	public EquipoDecorator(Peleable peleable) {
+		this.peleable = peleable;
+	}
+
+	public Peleable getPeleable() {
+		return peleable;
+	}
+
+	public void setPeleable(Peleable peleable) {
+		this.peleable = peleable;
+	}
+	
+	@Override
+	public double getAtaque() {
+		return 0;
+	}
+
+	@Override
+	public int getEnergia() {
+		return 0;
+	}
+
+	@Override
+	public double getDefensa() {
+		return 0;
+	}
+
+	@Override
+	public boolean puedeAtacar(Peleable f) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getPosicion() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean conVida() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void atacar(Peleable u2) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
