@@ -6,19 +6,19 @@ public abstract class Unidad {
 	private double salud;
 	private int energia;
 		
-	protected Unidad(int salud, int posicion,int energia){
+	public Unidad(int salud, int posicion,int energia){
 		this.salud = salud;
 		this.posicion = posicion;
 		this.energia = energia;
 	}
 	
-	protected Unidad(Unidad unidad) {
+	public Unidad(Unidad unidad) {
 		this.salud = unidad.salud;
 		this.posicion = unidad.posicion;
 		this.energia = unidad.energia;
 	}
 
-	protected final int getPosicion(){
+	public final int getPosicion(){
 		return posicion;
 	}
 	public final boolean conVida()
@@ -36,7 +36,7 @@ public abstract class Unidad {
 			return 0;
 		return victima.recibirDanio(getAtaque());
 	}
-	protected final double recibirDanio(double valor){
+	public final double recibirDanio(double valor){
 		double valorAtaqueFinal = valor - getDefensa();
 		if(valorAtaqueFinal < 0 )
 			valorAtaqueFinal = 0;

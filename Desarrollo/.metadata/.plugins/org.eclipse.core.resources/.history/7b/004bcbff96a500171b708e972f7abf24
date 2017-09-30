@@ -2,19 +2,19 @@ package item;
 
 import personaje.Unidad;
 
-public class Capa extends ItemDecorator {
+public class Puñal extends EquipoDecorator {
 	
-	public Capa(Unidad peleable){
+	public Puñal(Unidad peleable){
 		super(peleable);
 	}
 	public double getAtaque(){
-		return getPeleable().getAtaque() - getPeleable().getAtaque() * 0.1  ;
+		return getPeleable().getAtaque()+3;
 	}
 	public int getEnergia(){
-		return getPeleable().getEnergia() * 2;
+		return getPeleable().getEnergia();
 	}
 	public double getDefensa(){
-		return getPeleable().getDefensa();
+		return getPeleable().getDefensa()-3;
 	}
 	public boolean puedeRestauraEnergia() {
 		return getPeleable().puedeRestauraEnergia();

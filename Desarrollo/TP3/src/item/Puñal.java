@@ -2,7 +2,7 @@ package item;
 
 import personaje.Unidad;
 
-public class Puñal extends EquipoDecorator {
+public class Puñal extends ItemDecorator {
 	
 	public Puñal(Unidad peleable){
 		super(peleable);

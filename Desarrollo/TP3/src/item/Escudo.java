@@ -2,7 +2,7 @@ package item;
 
 import personaje.Unidad;
 
-public class Escudo extends EquipoDecorator {
+public class Escudo extends ItemDecorator {
 	
 	public Escudo(Unidad peleable){
 		super(peleable);

@@ -13,7 +13,6 @@ public class juego {
 		Unidad u2 = new Arquero(200);
 
 		u2 = new Puñal(u2);
-		
 		System.out.println(u2.getAtaque());
 		System.out.println(u1.puedoAtacar(u2));
 		System.out.println(u2.conVida());

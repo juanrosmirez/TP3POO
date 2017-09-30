@@ -36,7 +36,7 @@ public abstract class Unidad {
 			return 0;
 		return victima.recibirDanio(getAtaque());
 	}
-	protected final double recibirDanio(double valor){
+	public final double recibirDanio(double valor){
 		double valorAtaqueFinal = valor - getDefensa();
 		if(valorAtaqueFinal < 0 )
 			valorAtaqueFinal = 0;

@@ -47,8 +47,8 @@ public abstract class Unidad {
 	}
 	
 	public abstract double getAtaque();
-	public abstract double getDefensa();	
-	public abstract boolean puedeRestauraEnergia();
+	protected abstract double getDefensa();	
+	protected abstract boolean puedeRestauraEnergia();
 	
 	public void restaurarEnergia(){}
 	
