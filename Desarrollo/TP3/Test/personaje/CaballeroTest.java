@@ -1,5 +1,6 @@
 package personaje;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -233,6 +234,37 @@ public class CaballeroTest {
 			u2.avanzar();
 		}
 	}
+	
+	
+
+	@Test
+	public void puedeRestaurarEnergia(){
+		unidad = new Caballero(1);
+		assertTrue(unidad.puedeRestauraEnergia());
+	}
+
+	@Test
+	public void agotarEnergia(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(2);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		assertEquals(unidad.getEnergia(), 0, 0.1);
+	}
+	
+	@Test
+	public void restaurarEnergia(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(2);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		unidad.restaurarEnergia();
+		assertEquals(unidad.getEnergia(), ENERGIA, 0.1);
+		
+	}
+	
 	
 	
 }

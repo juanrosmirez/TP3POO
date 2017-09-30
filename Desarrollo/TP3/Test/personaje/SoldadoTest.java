@@ -11,7 +11,7 @@ import item.Puñal;
 public class SoldadoTest {
 	private final double ATAQUE = 10;
 	private final double SALUD = 200;
-	private final double ENERGIA = 100;
+	private final double ENERGIA = 10;
 	private final double DEFENSA = 1;
 
 	private Unidad unidad;
@@ -224,5 +224,37 @@ public class SoldadoTest {
 		Unidad u2 = new Soldado(2);
 		assertTrue(u1.puedoAtacar(u2));
 	}
+
+	@Test
+	public void puedeRestaurarEnergia(){
+		unidad = new Soldado(1);
+		assertTrue(unidad.puedeRestauraEnergia());
+	}
+
+	@Test
+	public void agotarEnergia(){
+		unidad = new Soldado(1);
+		Unidad victima = new Soldado(1);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		assertEquals(unidad.getEnergia(), 0, 0.1);
+	}
+	
+	@Test
+	public void restaurarEnergia(){
+		unidad = new Soldado(1);
+		Unidad victima = new Soldado(1);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		unidad.restaurarEnergia();
+		assertEquals(unidad.getEnergia(), ENERGIA, 0.1);
+		
+	}
+	
+	
+	
+	
 	
 }

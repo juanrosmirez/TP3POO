@@ -39,5 +39,11 @@ public class Lancero  extends Unidad{
 		return 1;
 	}
 
+	@Override
+	public double getGastoEnergetico() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 }

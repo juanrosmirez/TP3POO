@@ -31,4 +31,9 @@ public class Puñal extends ItemDecorator {
 		// TODO Auto-generated method stub
 		return getPeleable().getDefensaBase();
 	}
+	@Override
+	public double getGastoEnergetico() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

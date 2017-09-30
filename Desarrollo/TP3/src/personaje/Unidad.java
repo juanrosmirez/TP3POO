@@ -34,6 +34,7 @@ public abstract class Unidad {
 	public final double atacar(Unidad victima){
 		if (!puedoAtacar(victima))
 			return 0;
+		energia -= getGastoEnergetico();
 		return victima.recibirDanio(getAtaque());
 	}
 	protected final double recibirDanio(double valor){
@@ -45,7 +46,8 @@ public abstract class Unidad {
 		
 		return valorAtaqueFinal;
 	}
-	
+
+	public abstract double getGastoEnergetico();
 	public abstract double getAtaque();
 	public abstract double getDefensa();	
 	public abstract boolean puedeRestauraEnergia();

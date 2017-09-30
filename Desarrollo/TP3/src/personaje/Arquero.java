@@ -29,7 +29,7 @@ public class Arquero extends Unidad {
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(super.getEnergia()+3);
+		super.setEnergia(super.getEnergia()+6);
 		
 	}
 	@Override
@@ -40,6 +40,12 @@ public class Arquero extends Unidad {
 
 	@Override
 	public double getDefensaBase() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public double getGastoEnergetico() {
 		// TODO Auto-generated method stub
 		return 1;
 	}

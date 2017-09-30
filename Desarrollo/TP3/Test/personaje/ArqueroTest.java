@@ -236,4 +236,34 @@ public class ArqueroTest {
 	}
 	
 
+	@Test
+	public void puedeRestaurarEnergia(){
+		unidad = new Arquero(1);
+		assertTrue(unidad.puedeRestauraEnergia());
+	}
+
+	@Test
+	public void agotarEnergia(){
+		unidad = new Arquero(1);
+		Unidad victima = new Soldado(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		assertEquals(unidad.getEnergia(), 0, 0.1);
+	}
+	
+	@Test
+	public void restaurarEnergia(){
+		unidad = new Arquero(1);
+		Unidad victima = new Soldado(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+		}
+		unidad.restaurarEnergia();
+		assertEquals(unidad.getEnergia(), 6, 0.1);
+		
+	}
+	
+	
+
 }

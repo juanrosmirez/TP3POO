@@ -3,7 +3,7 @@ package personaje;
 public class Soldado extends Unidad{
 
 	public Soldado(int posicion){
-		super(200,posicion,100);
+		super(200,posicion,10);
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class Soldado extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(100);
+		super.setEnergia(10);
 	}
 
 	@Override
@@ -42,4 +42,11 @@ public class Soldado extends Unidad{
 		// TODO Auto-generated method stub
 		return 1;
 	}
+
+	@Override
+	public double getGastoEnergetico() {
+		return 1;
+	}
+
+	
 }
