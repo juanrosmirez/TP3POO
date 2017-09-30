@@ -1,0 +1,70 @@
+package personaje;
+
+import item.Peleable;
+
+public abstract class Unidad implements Peleable{
+
+	private double salud;
+	private int posicion;
+	private int energia;
+	
+	public Unidad(int salud, int posicion, int energia){
+		this.salud = salud;
+		this.posicion = posicion;
+		this.energia = energia;
+	}
+	
+	public final double atacar(Unidad u){
+		if (!puedoAtacar(u))
+			return 0;
+		
+		return u.recibirDanio(this.getAtaque());
+	}
+	
+	public final double recibirDanio(double valor){
+		double valorAtaqueFinal = valor - getDefensa();
+		if(valorAtaqueFinal < 0 )
+			valorAtaqueFinal = 0;
+		
+		salud = salud - valorAtaqueFinal;
+		
+		return valorAtaqueFinal;
+	}
+	
+	@Override
+	public final double getDefensa(){
+		return 0;
+	}
+
+	public final int getPosicion(){
+		return posicion;
+	}
+
+	public final int setEnergia(int energia){
+		return energia;
+	}
+
+	public boolean puedoAtacar(Unidad u){
+		if(getEnergia()<=0)
+			return false;
+		return true;
+	}
+
+	public abstract boolean puedeRestauraEnergia();
+	@Override
+	public abstract double getAtaque() ;
+	
+	@Override
+	public int getEnergia() {
+		return energia;
+		
+	}
+	
+	public void restaurarEnergia(){}
+
+	public boolean conVida()
+	{
+		return salud > 0;
+	}
+		
+}

@@ -1,0 +1,85 @@
+package personaje;
+
+import item.Capa;
+import item.Escudo;
+import item.Peleable;
+import item.Puñal;
+
+public abstract class Unidad{
+
+	private double salud;
+	private int posicion;
+	private int energia;
+	
+	private Peleable equipo;
+	
+	public void equiparEscudo(){
+		equipo = new Escudo(equipo);
+	}
+	public void equiparPunial(){
+		equipo = new Puñal(equipo);
+	}
+	public void equiparCapa(){
+		equipo = new Capa(equipo);
+	}
+	
+	public Unidad(int salud, int posicion, int energia){
+		this.salud = salud;
+		this.posicion = posicion;
+		this.energia = energia;
+	}
+	
+	public final double atacar(Unidad u){
+		if (!puedoAtacar(u))
+			return 0;
+		
+		return u.recibirDanio(this.getAtaque());
+	}
+	
+	public final double recibirDanio(double valor){
+		double valorAtaqueFinal = valor - getDefensa();
+		if(valorAtaqueFinal < 0 )
+			valorAtaqueFinal = 0;
+		
+		salud = salud - valorAtaqueFinal;
+		
+		return valorAtaqueFinal;
+	}
+	
+	public final double getDefensa(){
+		return equipo.getDefensa();
+	}
+
+	public final int getPosicion(){
+		return posicion;
+	}
+
+	public final int setEnergia(int energia){
+		return energia;
+	}
+
+	public boolean puedoAtacar(Unidad u){
+		if(getEnergia()<=0)
+			return false;
+		return true;
+	}
+
+	public abstract boolean puedeRestauraEnergia();
+	
+	public abstract double getAtaque() ;
+	
+	public int getEnergia() {
+		return equipo.getEnergia();
+		
+	}
+	
+	public void restaurarEnergia(){}
+
+	public boolean conVida()
+	{
+		return salud > 0;
+	}
+
+
+		
+}

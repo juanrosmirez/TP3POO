@@ -1,0 +1,34 @@
+package item;
+
+public class UnidadDecorator implements Peleable {
+	private Peleable peleable;
+	
+	public UnidadDecorator(Peleable peleable) {
+		this.peleable = peleable;
+	}
+
+	public Peleable getPeleable() {
+		return peleable;
+	}
+
+	public void setPeleable(Peleable peleable) {
+		this.peleable = peleable;
+	}
+
+	@Override
+	public int getAtaque() {
+		return 0;
+	}
+
+	@Override
+	public int getEnergia() {
+		return 0;
+	}
+
+	@Override
+	public int getDefensa() {
+		return 0;
+	}
+	
+
+}

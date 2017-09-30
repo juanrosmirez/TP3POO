@@ -1,0 +1,38 @@
+package personaje;
+
+import item.Peleable;
+
+public abstract class Unidad implements Peleable{
+
+	private int salud;
+	private int posicion;
+	
+	public Unidad(int salud){
+		this.salud = salud;
+	}
+	
+	public final void atacar(Unidad u){
+		
+	}
+	
+	public void recibirDanio(){
+		
+	}
+	
+	
+	@Override
+	public int getAtaque() {
+		return 0;
+	}
+
+	@Override
+	public int getEnergia() {
+		return 1;
+	}
+
+	@Override
+	public int getDefensa() {
+		return 0;
+	}
+
+}
