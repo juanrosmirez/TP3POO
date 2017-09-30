@@ -2,6 +2,10 @@ package personaje;
 
 public abstract class Unidad {
 
+	private static int count = 0;
+	
+	private int numero;
+	
 	private int posicion;
 	private double salud;
 	private int energia;
@@ -10,12 +14,16 @@ public abstract class Unidad {
 		this.salud = salud;
 		this.posicion = posicion;
 		this.energia = energia;
+		this.numero = count;
+		count++;
 	}
 	
 	protected Unidad(Unidad unidad) {
 		this.salud = unidad.salud;
 		this.posicion = unidad.posicion;
 		this.energia = unidad.energia;
+		this.numero = count;
+		count++;
 	}
 
 	protected final int getPosicion(){
@@ -28,9 +36,20 @@ public abstract class Unidad {
 	public boolean puedoAtacar(Unidad victima){
 		if(getEnergia()<=0)
 			return false;
+		if(victima.conVida() == false)
+			return false;
+		if(this.conVida() == false)
+			return false;
+		if(this.numero == victima.getNumero())
+			return false;
 		return true;
 	}
 	
+	private int getNumero() {
+		// TODO Auto-generated method stub
+		return numero;
+	}
+
 	public final double atacar(Unidad victima){
 		if (!puedoAtacar(victima))
 			return 0;

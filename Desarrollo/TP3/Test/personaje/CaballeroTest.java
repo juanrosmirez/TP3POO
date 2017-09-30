@@ -213,7 +213,6 @@ public class CaballeroTest {
 				  );
 	}	
 	
-
 	@Test
 	public void distanciaNoValidaParaCombate(){
 		Unidad u1 = new Caballero(0);
@@ -235,8 +234,6 @@ public class CaballeroTest {
 		}
 	}
 	
-	
-
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Caballero(1);
@@ -249,6 +246,8 @@ public class CaballeroTest {
 		Unidad victima = new Caballero(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
 			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
 		}
 		assertEquals(unidad.getEnergia(), 0, 0.1);
 	}
@@ -266,5 +265,88 @@ public class CaballeroTest {
 	}
 	
 	
+	@Test
+	public void noPoderAtacarMuertos(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(unidad.puedoAtacar(victima));
+	
+	}
+	
+	@Test
+	public void noAtacarMuertos(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(unidad.atacar(victima), 0, 0.1);
+	
+	}
+
+	@Test
+	public void noSeAutoAtaca(){
+
+		unidad = new Caballero(1);
+		assertFalse(unidad.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noPoderAtacarEstandoMuerto(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(victima.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noAtacarEstandoMuerto(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(victima.atacar(unidad), 0, 0.1);
+	
+		
+	}
+	
+	@Test
+	public void noPoderAtacarAgotado(){
+		unidad = new Caballero(1);
+		Unidad victima = new Soldado(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		System.out.println(unidad.getEnergia());
+		assertFalse(unidad.puedoAtacar(new Soldado(200)));
+	}	
+	
+	@Test
+	public void noAtacarAgotado(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		assertEquals(unidad.atacar(new Soldado(200)), 0, 0.1);
+		
+	}
 	
 }
+
+	
+	

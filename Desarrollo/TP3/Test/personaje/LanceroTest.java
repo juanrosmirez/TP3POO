@@ -248,7 +248,8 @@ public class LanceroTest {
 		unidad = new Lancero(1);
 		Unidad victima = new Soldado(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
-			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
 		}
 		assertEquals(unidad.getEnergia(), ENERGIA, 0.1);
 	}
@@ -266,6 +267,60 @@ public class LanceroTest {
 		
 	}
 
+	@Test
+	public void noPoderAtacarMuertos(){
+		unidad = new Lancero(1);
+		Unidad victima = new Lancero(2);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(unidad.puedoAtacar(victima));
+	
+	}
+	
+	@Test
+	public void noAtacarMuertos(){
+		unidad = new Lancero(1);
+		Unidad victima = new Lancero(2);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(unidad.atacar(victima), 0, 0.1);
+	
+	}
+
+	@Test
+	public void noSeAutoAtaca(){
+
+		unidad = new Lancero(1);
+		assertFalse(unidad.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noPoderAtacarEstandoMuerto(){
+		unidad = new Lancero(1);
+		Unidad victima = new Lancero(2);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(victima.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noAtacarEstandoMuerto(){
+		unidad = new Lancero(1);
+		Unidad victima = new Lancero(2);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(victima.atacar(unidad), 0, 0.1);
+	
+		
+	}
 	
 	
 }

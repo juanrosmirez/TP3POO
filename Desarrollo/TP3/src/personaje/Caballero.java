@@ -28,7 +28,10 @@ public class Caballero  extends Unidad{
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(super.getEnergia()+3);
+		int e = super.getEnergia()+3;
+		if(e>3)
+			e= 3;
+		super.setEnergia(e);
 		
 	}
 	@Override

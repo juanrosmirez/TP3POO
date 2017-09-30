@@ -235,7 +235,6 @@ public class ArqueroTest {
 		}
 	}
 	
-
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Arquero(1);
@@ -248,6 +247,8 @@ public class ArqueroTest {
 		Unidad victima = new Soldado(3);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
 			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
 		}
 		assertEquals(unidad.getEnergia(), 0, 0.1);
 	}
@@ -264,6 +265,86 @@ public class ArqueroTest {
 		
 	}
 	
-	
 
+	@Test
+	public void noPoderAtacarMuertos(){
+		unidad = new Arquero(1);
+		Unidad victima = new Arquero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(unidad.puedoAtacar(victima));
+	
+	}
+	
+	@Test
+	public void noAtacarMuertos(){
+		unidad = new Arquero(1);
+		Unidad victima = new Arquero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(unidad.atacar(victima), 0, 0.1);
+	
+	}
+
+	@Test
+	public void noSeAutoAtaca(){
+
+		unidad = new Arquero(1);
+		assertFalse(unidad.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noPoderAtacarEstandoMuerto(){
+		unidad = new Arquero(1);
+		Unidad victima = new Arquero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertFalse(victima.puedoAtacar(unidad));
+	}
+
+	@Test
+	public void noAtacarEstandoMuerto(){
+		unidad = new Arquero(1);
+		Unidad victima = new Arquero(3);
+		while(victima.conVida()){
+			unidad.atacar(victima);
+			unidad.restaurarEnergia();
+		}
+		assertEquals(victima.atacar(unidad), 0, 0.1);
+	
+		
+	}
+	
+	@Test
+	public void noPoderAtacarAgotado(){
+		unidad = new Arquero(1);
+		Unidad victima = new Arquero(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		assertFalse(unidad.puedoAtacar(victima));
+	}	
+	
+	@Test
+	public void noAtacarAgotado(){
+		unidad = new Arquero(1);
+		Unidad victima = new Soldado(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		assertEquals(unidad.atacar(victima), 0, 0.1);
+		
+	}
+	
+	
 }

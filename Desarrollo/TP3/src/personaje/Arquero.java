@@ -29,7 +29,10 @@ public class Arquero extends Unidad {
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(super.getEnergia()+6);
+		int e = super.getEnergia()+6;
+		if(e>20)
+			e= 20;
+		super.setEnergia(e);
 		
 	}
 	@Override
