@@ -17,7 +17,7 @@ public class SoldadoTest {
 	private Unidad unidad;
 	
 	@Test
-	public void crearNuevoTest(){
+	public void crearSoldadoNuevoTest(){
 		unidad = new Soldado(1);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&

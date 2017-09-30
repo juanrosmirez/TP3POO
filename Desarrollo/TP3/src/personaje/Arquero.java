@@ -13,7 +13,7 @@ public class Arquero extends Unidad {
 
 	@Override
 	public double getDefensa() {
-		return 0;
+		return 1;
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class Arquero extends Unidad {
 	@Override
 	public double getDefensaBase() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 	
 }
