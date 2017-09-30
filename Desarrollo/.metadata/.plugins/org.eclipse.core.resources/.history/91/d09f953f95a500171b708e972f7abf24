@@ -15,7 +15,7 @@ public class Arquero extends Unidad {
 	public double getDefensa() {
 		return 0;
 	}
-	
+
 	@Override
 	public boolean puedoAtacar(Unidad u) {
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
@@ -32,5 +32,10 @@ public class Arquero extends Unidad {
 		super.setEnergia(super.getEnergia()+3);
 		
 	}
-	
+
+
+
+
+
+
 }

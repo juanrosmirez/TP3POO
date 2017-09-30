@@ -17,6 +17,7 @@ public class Capa extends EquipoDecorator {
 		return getPeleable().getDefensa();
 	}
 	public boolean puedeRestauraEnergia() {
+		// TODO Auto-generated method stub
 		return getPeleable().puedeRestauraEnergia();
 	}
 }

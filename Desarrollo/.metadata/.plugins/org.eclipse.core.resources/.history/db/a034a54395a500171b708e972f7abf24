@@ -6,16 +6,7 @@ public class Arquero extends Unidad {
 		super(50, posicion,20);
 	}
 
-	@Override
-	public double getAtaque() {
-		return 5;
-	}
 
-	@Override
-	public double getDefensa() {
-		return 0;
-	}
-	
 	@Override
 	public boolean puedoAtacar(Unidad u) {
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
@@ -32,5 +23,19 @@ public class Arquero extends Unidad {
 		super.setEnergia(super.getEnergia()+3);
 		
 	}
-	
+
+
+	@Override
+	public double getAtaque() {
+		return 5;
+	}
+
+	@Override
+	public double getDefensa() {
+		return 0;
+	}
+
+
+
+
 }

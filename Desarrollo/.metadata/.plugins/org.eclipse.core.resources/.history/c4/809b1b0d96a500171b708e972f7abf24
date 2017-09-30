@@ -1,25 +1,25 @@
 package personaje;
 
+public class Soldado extends Unidad{
 
-public class Arquero extends Unidad {
-	public Arquero(int posicion) {
-		super(50, posicion,20);
+	public Soldado(int posicion){
+		super(200,posicion,100);
 	}
 
 	@Override
 	public double getAtaque() {
-		return 5;
+		return 10;
 	}
 
 	@Override
 	public double getDefensa() {
-		return 0;
+		return 1;
 	}
-	
+
 	@Override
-	public boolean puedoAtacar(Unidad u) {
+	public boolean puedoAtacar(Unidad u){
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
-		return super.puedoAtacar(u) && distancia >= 2 && distancia <= 5 ;
+		return super.puedoAtacar(u) && distancia ==0;
 	}
 
 	@Override
@@ -29,8 +29,15 @@ public class Arquero extends Unidad {
 
 	@Override
 	public void restaurarEnergia() {
-		super.setEnergia(super.getEnergia()+3);
-		
+		super.setEnergia(100);
 	}
+
+
+
+
+
+
+
+	
 	
 }

@@ -18,10 +18,17 @@ public abstract class EquipoDecorator extends Unidad {
 		this.peleable = peleable;
 	}
 	
-	//no se si pueden ser abstract
-	public abstract double getAtaque();
-	public abstract int getEnergia() ;
-	public abstract double getDefensa() ;
+	public double getAtaque() {
+		return 0;
+	}
+
+	public int getEnergia() {
+		return 0;
+	}
+
+	public double getDefensa() {
+		return 0;
+	}
 
 	
 

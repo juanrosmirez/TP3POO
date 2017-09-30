@@ -17,7 +17,6 @@ public class Escudo extends EquipoDecorator {
 		return getPeleable().getDefensa() +  getPeleable().getDefensa()*0.4;
 	}
 	public boolean puedeRestauraEnergia() {
-		// TODO Auto-generated method stub
 		return getPeleable().puedeRestauraEnergia();
 	}
 

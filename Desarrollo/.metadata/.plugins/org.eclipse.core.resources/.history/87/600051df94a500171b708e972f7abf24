@@ -17,6 +17,7 @@ public class Puñal extends EquipoDecorator {
 		return getPeleable().getDefensa()-3;
 	}
 	public boolean puedeRestauraEnergia() {
+		// TODO Auto-generated method stub
 		return getPeleable().puedeRestauraEnergia();
 	}
 }

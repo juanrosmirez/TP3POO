@@ -6,6 +6,7 @@ public class Arquero extends Unidad {
 		super(50, posicion,20);
 	}
 
+
 	@Override
 	public double getAtaque() {
 		return 5;
