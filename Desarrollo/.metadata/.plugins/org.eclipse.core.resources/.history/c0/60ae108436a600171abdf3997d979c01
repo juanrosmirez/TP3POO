@@ -214,6 +214,7 @@ public class LanceroTest {
 				  );
 	}	
 	
+
 	@Test
 	public void distanciaNoValidaParaCombate(){
 		Unidad u1 = new Lancero(0);
@@ -235,6 +236,7 @@ public class LanceroTest {
 		}
 	}
 	
+
 	@Test
 	public void puedeRestaurarEnergia(){
 		unidad = new Lancero(1);
@@ -319,4 +321,6 @@ public class LanceroTest {
 	
 		
 	}
+	
+	
 }
