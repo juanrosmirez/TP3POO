@@ -6,8 +6,9 @@
 <fullyQualifiedTypeName name="item.Personaje"/>
 <fullyQualifiedTypeName name="item.Peleable"/>
 <fullyQualifiedTypeName name="personaje.Unidad"/>
-<fullyQualifiedTypeName name="item.Escudo"/>
-<fullyQualifiedTypeName name="item.Capa"/>
-<fullyQualifiedTypeName name="item.Puñal"/>
 <fullyQualifiedTypeName name="personaje.Arquero"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="item.Capa"/>
+<fullyQualifiedTypeName name="item.Escudo"/>
+<fullyQualifiedTypeName name="item.Puñal"/>
 </qualifiedTypeNameHistroy>

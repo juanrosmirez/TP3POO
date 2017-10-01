@@ -20,7 +20,7 @@ public class Arquero extends Unidad {
 	}
 
 	@Override
-	public double getDefensa() {
+	public double getDefensa(double valor) {
 		return DEFENSA;
 	}
 	

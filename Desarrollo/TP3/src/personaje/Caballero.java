@@ -19,7 +19,7 @@ public class Caballero  extends Unidad{
 	}
 
 	@Override
-	public double getDefensa() {
+	public double getDefensa(double valor) {
 		return DEFENSA;
 	}
 

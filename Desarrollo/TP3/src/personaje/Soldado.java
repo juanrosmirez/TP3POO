@@ -8,7 +8,7 @@ public class Soldado extends Unidad{
 	private static final int SALUD = 200;
 	private static final int ENERGIA = 100;
 	private static final int ATAQUE = 10;
-	private static final int DEFENSA = 1;
+	private static final int DEFENSA = 0;
 	
 	public Soldado(int posicion){
 		super(SALUD,posicion,ENERGIA);
@@ -20,7 +20,7 @@ public class Soldado extends Unidad{
 	}
 
 	@Override
-	public double getDefensa() {
+	public double getDefensa(double valor ) {
 		return DEFENSA;
 	}
 

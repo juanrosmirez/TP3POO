@@ -19,7 +19,7 @@ public class Lancero  extends Unidad{
 	}
 
 	@Override
-	public double getDefensa() {
+	public double getDefensa(double valor) {
 		return DEFENSA;
 	}
 	

@@ -61,7 +61,8 @@ public abstract class Unidad {
 	}
 	
 	public final double recibirDanio(double valor){
-		double valorAtaqueFinal = valor - getDefensa();
+		double valorAtaqueFinal = valor - getDefensa(valor);
+		System.out.println(valorAtaqueFinal);
 		if(valorAtaqueFinal < 0 )
 			valorAtaqueFinal = 0;
 		
@@ -75,7 +76,7 @@ public abstract class Unidad {
 	}
 	public abstract double getGastoEnergetico();
 	public abstract double getAtaque();
-	public abstract double getDefensa();	
+	public abstract double getDefensa(double valor);	
 	public abstract double getAtaqueBase();
 	public abstract double getDefensaBase();
 	public abstract int getEnergiaMaxima();

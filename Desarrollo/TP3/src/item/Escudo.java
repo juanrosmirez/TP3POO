@@ -32,8 +32,8 @@ public class Escudo extends ItemDecorator {
 	/**
 	 * Devuelve la nueva defensa que se adquiere por portar un escudo
 	 * */
-	public double getDefensa(){
-		return getUnidad().getDefensa() +  getUnidad().getDefensaBase()*0.4;
+	public double getDefensa(double valor){
+		return getUnidad().getDefensa(valor) +  valor*0.4;
 	}
 	
 	@Override
