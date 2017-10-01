@@ -30,56 +30,10 @@ public class Escudo extends ItemDecorator {
 		super(peleable);
 	}
 	/**
-	 * Devuelve el danio producido por el ataque portando un escudo
-	 * */
-	public double getAtaque(){
-		return getPeleable().getAtaque();
-	}
-	/**
-	 * Devuelve la energia que se tiene portando un escudo
-	 * */
-	public int getEnergia(){
-		return getPeleable().getEnergia();
-	}
-	/**
 	 * Devuelve la nueva defensa que se adquiere por portar un escudo
 	 * */
 	public double getDefensa(){
-		return getPeleable().getDefensa() +  getPeleable().getDefensaBase()*0.4;
-	}
-	/**
-	 * Devuelve la posibilidad de restaurar la energia. El escudo no afecta esta caracteristica
-	 * */
-	public boolean puedeRestauraEnergia() {
-		return getPeleable().puedeRestauraEnergia();
+		return getUnidad().getDefensa() +  getUnidad().getDefensaBase()*0.4;
 	}
 
-	/**
-	 * Devuelve el valor del ataque sin portar items
-	 * */
-	public double getAtaqueBase() {
-		return getPeleable().getAtaqueBase();
-	}
-
-	/**
-	 * Devuelve el valor de la defensa sin portar items
-	 * */
-	public double getDefensaBase() {
-		// TODO Auto-generated method stub
-		return getPeleable().getDefensaBase();
-	}
-	/**
-	 * Devuelve el gasto que implica  atacar sin portar items
-	 * */
-	public double getGastoEnergetico() {
-		return getPeleable().getGastoEnergetico();
-	}
-
-	/**
-	 * Devuelve la energia maxima que se puede adquirir
-	 * */
-	public int getEnergiaMaxima() {
-		// TODO Auto-generated method stub
-		return getPeleable().getEnergiaMaxima();
-	}
 }

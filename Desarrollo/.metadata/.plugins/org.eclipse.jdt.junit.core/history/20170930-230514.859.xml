@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SoldadoTest" project="TP3" tests="27" started="27" failures="0" errors="0" ignored="0">
+  <testsuite name="personaje.SoldadoTest" time="0.016">
+    <testcase name="equiparCapaEscudoPunialTest" classname="personaje.SoldadoTest" time="0.003"/>
+    <testcase name="puedeRestaurarEnergia" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noAtacarMuertos" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="restaurarEnergia" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparPunialCapaTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noPoderAtacarAgotado" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparPunialTest" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="distanciaNoValidaParaCombate" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="distanciaValidaParaCombate" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noPoderAtacarEstandoMuerto" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparEscudoPunialTest" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="equiparCapaPunialTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparCapaPunialEscudoTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparCapaTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noAtacarAgotado" classname="personaje.SoldadoTest" time="0.002"/>
+    <testcase name="noAtacarEstandoMuerto" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="crearNuevoTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparEscudoTest" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="agotarEnergia" classname="personaje.SoldadoTest" time="0.002"/>
+    <testcase name="equiparPunialCapaEscudoTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noSeAutoAtaca" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="noReponerEnergiaSiEstaAlPalo" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="noPoderAtacarMuertos" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparCapaEscudoTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparEscudoCapaTest" classname="personaje.SoldadoTest" time="0.0"/>
+    <testcase name="equiparEscudoCapaPunialTest" classname="personaje.SoldadoTest" time="0.001"/>
+    <testcase name="equiparPunialEscudoTest" classname="personaje.SoldadoTest" time="0.002"/>
+  </testsuite>
+</testrun>

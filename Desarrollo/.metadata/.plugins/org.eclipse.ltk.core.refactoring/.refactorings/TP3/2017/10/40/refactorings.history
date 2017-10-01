@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;item.ItemDecorator.getPeleable()&apos; to &apos;getUnidad&apos;&#x0A;- Original project: &apos;TP3&apos;&#x0A;- Original element: &apos;item.ItemDecorator.getPeleable()&apos;&#x0A;- Renamed element: &apos;item.ItemDecorator.getUnidad()&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;getPeleable&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;item{ItemDecorator.java[ItemDecorator~getPeleable" name="getUnidad" references="true" stamp="1506829426311" version="1.0"/>
+</session>

@@ -58,4 +58,5 @@ public class Lancero  extends Unidad{
 		// TODO Auto-generated method stub
 		return ENERGIA;
 	}
+
 }

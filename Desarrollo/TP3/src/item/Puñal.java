@@ -11,36 +11,10 @@ public class Puñal extends ItemDecorator {
 		super(peleable);
 	}
 	public double getAtaque(){
-		return getPeleable().getAtaque()+3;
-	}
-	public int getEnergia(){
-		return getPeleable().getEnergia();
+		return getUnidad().getAtaque()+3;
 	}
 	public double getDefensa(){
-		return getPeleable().getDefensa()-3;
-	}
-	public boolean puedeRestauraEnergia() {
-		return getPeleable().puedeRestauraEnergia();
+		return getUnidad().getDefensa()-3;
 	}
 	
-
-	@Override
-	public double getAtaqueBase() {
-		return getPeleable().getAtaqueBase();
-	}
-
-	@Override
-	public double getDefensaBase() {
-		// TODO Auto-generated method stub
-		return getPeleable().getDefensaBase();
-	}
-	@Override
-	public double getGastoEnergetico() {
-		return getPeleable().getGastoEnergetico();
-	}
-	@Override
-	public int getEnergiaMaxima() {
-		// TODO Auto-generated method stub
-		return getPeleable().getEnergiaMaxima();
-	}
 }

@@ -35,48 +35,21 @@ public class Capa extends ItemDecorator {
 	 * Devuelve el danio producido por el ataque portando una capa
 	 * */
 	public double getAtaque(){
-		return getPeleable().getAtaque() - getPeleable().getAtaqueBase() * 0.1  ;
+		return getUnidad().getAtaque() - getUnidad().getAtaqueBase() * 0.1  ;
 	}
 	/**
 	 * Devuelve la energia que se tiene portando una capa
 	 * */
 	public int getEnergia(){
-		return getPeleable().getEnergia() * 2;
+		return getUnidad().getEnergia() * 2;
 	}
-	/**
-	 * Devuelve la defensa sin alterarla. La capa no afecta la defensa
-	 * */
-	public double getDefensa(){
-		return getPeleable().getDefensa();
-	}
-	/**
-	 * Devuelve la posibilidad de restaurar la energia. La capa no afecta esta caracteristica
-	 * */
-	public boolean puedeRestauraEnergia() {
-		return getPeleable().puedeRestauraEnergia();
-	}
-
-	/**
-	 * Devuelve el valor del ataque sin portar items
-	 * */
-	public double getAtaqueBase() {
-		return getPeleable().getAtaqueBase();
-	}
-
-	/**
-	 * Devuelve el valor de la defensa sin portar items
-	 * */
-	public double getDefensaBase() {
-		// TODO Auto-generated method stub
-		return getPeleable().getDefensaBase();
-	}
-
+	
 	/**
 	 * Devuelve el gasto que implica  atacar sin portar items
 	 * */
 	@Override
 	public double getGastoEnergetico() {
-		return getPeleable().getGastoEnergetico()/2;
+		return getUnidad().getGastoEnergetico()/2;
 	}
 
 	/**
@@ -84,6 +57,6 @@ public class Capa extends ItemDecorator {
 	 * */
 	public int getEnergiaMaxima() {
 		// TODO Auto-generated method stub
-		return getPeleable().getEnergiaMaxima()*2;
+		return getUnidad().getEnergiaMaxima()*2;
 	}
 }

@@ -63,5 +63,6 @@ public class Soldado extends Unidad{
 		return 10;
 	}
 
+
 	
 }

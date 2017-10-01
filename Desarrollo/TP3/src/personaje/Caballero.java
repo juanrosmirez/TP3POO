@@ -66,4 +66,5 @@ public class Caballero  extends Unidad{
 		// TODO Auto-generated method stub
 		return ENERGIA;
 	}
+
 }
