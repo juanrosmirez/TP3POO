@@ -4,7 +4,7 @@ import personaje.Unidad;
 
 /**
  * @author adrian
- * <h1>Clase Capa</h1>
+ * <h1>Clse Capa</h1>
  * <h4>Clase que permite agregar las funcionalidades que implica el poseer una capa</h4>
  * <h5>ENERGIA: x2</h5>
  * <h5>ATAQUE: -40% </h5>

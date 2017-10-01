@@ -2,7 +2,7 @@ package personaje;
 
 import item.Capa;
 import item.Escudo;
-import item.Punial;
+import item.Puñal;
 
 public class Juego {
 
@@ -11,7 +11,7 @@ public class Juego {
 		Unidad victima = new Soldado(0);
 	
 		unidad = new Capa(unidad);
-		victima = new Punial(victima);
+		victima = new Puñal(victima);
 		victima = new Escudo(victima);
 		
 		System.out.println(unidad);

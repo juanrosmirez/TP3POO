@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import item.Capa;
 import item.Escudo;
-import item.Puñal;
+import item.Punial;
 /**
  * @author adrian
  *
@@ -50,7 +50,7 @@ public class CaballeroTest {
 	@Test
 	public void equiparPunialTest(){
 		unidad = new Caballero(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3)   == 0 && 
@@ -105,7 +105,7 @@ public class CaballeroTest {
 	public void equiparEscudoPunialTest(){
 		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
@@ -118,7 +118,7 @@ public class CaballeroTest {
 	@Test
 	public void equiparPunialEscudoTest(){
 		unidad = new Caballero(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		unidad = new Escudo(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -132,7 +132,7 @@ public class CaballeroTest {
 	@Test
 	public void equiparPunialCapaTest(){
 		unidad = new Caballero(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		unidad = new Capa(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -147,7 +147,7 @@ public class CaballeroTest {
 	public void equiparCapaPunialTest(){
 		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
@@ -162,7 +162,7 @@ public class CaballeroTest {
 		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -177,7 +177,7 @@ public class CaballeroTest {
 		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -192,7 +192,7 @@ public class CaballeroTest {
 		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -207,7 +207,7 @@ public class CaballeroTest {
 		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*.1)   == 0 && 

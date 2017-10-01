@@ -4,7 +4,7 @@ import personaje.Unidad;
 
 /**
  * @author adrian
- * <h1>Clase Escudo</h1>
+ * <h1>Clse Escudo</h1>
  * <h4>Clase que permite agregar las funcionalidades que implica el poseer una escudo</h4>
  * <h5>DEFENSA: 40% mas </h5>
  * <h6>Metodos:</h6>

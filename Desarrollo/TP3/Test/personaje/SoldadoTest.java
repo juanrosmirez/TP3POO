@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import item.Capa;
 import item.Escudo;
-import item.Puñal;
+import item.Punial;
 /**
  * @author adrian
  *
@@ -47,7 +47,7 @@ public class SoldadoTest {
 	@Test
 	public void equiparPunialTest(){
 		unidad = new Soldado(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3)   == 0 && 
@@ -102,7 +102,7 @@ public class SoldadoTest {
 	public void equiparEscudoPunialTest(){
 		unidad = new Soldado(1);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
@@ -115,7 +115,7 @@ public class SoldadoTest {
 	@Test
 	public void equiparPunialEscudoTest(){
 		unidad = new Soldado(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		unidad = new Escudo(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -129,7 +129,7 @@ public class SoldadoTest {
 	@Test
 	public void equiparPunialCapaTest(){
 		unidad = new Soldado(1);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		unidad = new Capa(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -144,7 +144,7 @@ public class SoldadoTest {
 	public void equiparCapaPunialTest(){
 		unidad = new Soldado(1);
 		unidad = new Capa(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
@@ -159,7 +159,7 @@ public class SoldadoTest {
 		unidad = new Soldado(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -174,7 +174,7 @@ public class SoldadoTest {
 		unidad = new Soldado(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -189,7 +189,7 @@ public class SoldadoTest {
 		unidad = new Soldado(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -204,7 +204,7 @@ public class SoldadoTest {
 		unidad = new Soldado(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Puñal(unidad);
+		unidad = new Punial(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*.1)   == 0 && 

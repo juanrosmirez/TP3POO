@@ -147,27 +147,19 @@ public abstract class ItemDecorator extends Unidad {
 	public double getDefensa(double valor) {
 		return this.unidad.getDefensa(valor);
 	}
-	
-	/**Accede a la unidad decorada para consumir su energia tras un ataque por ejemplo.
-	 */
+
 	public void consumirEnergia(){
 		this.unidad.consumirEnergia();
 	}
-
-	/**Accede a la unidad decorada para restaurar su energia
-	 */
+	
 	public void restaurarEnergia(){
 		this.unidad.restaurarEnergia();
 	}
 
-	/**Accede a la unidad decorada para avanzar en su posicion
-	 */
 	public void avanzar(){
 		this.unidad.avanzar();
 	}
-
-	/**Accede a la unidad decorada para retroceder en su posicion
-	 */
+	
 	public void retroceder(){
 		this.unidad.retroceder();
 	}

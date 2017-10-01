@@ -8,24 +8,23 @@ import org.junit.Test;
 
 import item.Capa;
 import item.Escudo;
-import item.Punial;
+import item.Puñal;
 /**
  * @author adrian
  *
  */
-public class LanceroTest {
-
-	private final double ATAQUE = 25;
-	private final double SALUD = 150;
-	private final double ENERGIA = 1;
+public class CaballeroTest {
+	private final double ATAQUE = 50;
+	private final double SALUD = 200;
+	private final double ENERGIA = 3;
 	private final double DEFENSA = 0;
 
 	private Unidad unidad;
-
 	
+
 	@Test
 	public void crearNuevoTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE)   == 0 && 
@@ -37,7 +36,7 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparEscudoTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -50,8 +49,8 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparPunialTest(){
-		unidad = new Lancero(1);
-		unidad = new Punial(unidad);
+		unidad = new Caballero(1);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3)   == 0 && 
@@ -63,7 +62,7 @@ public class LanceroTest {
 
 	@Test
 	public void equiparCapaTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -76,7 +75,7 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparEscudoCapaTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
 		assertTrue(
@@ -90,7 +89,7 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparCapaEscudoTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
 		assertTrue(
@@ -104,9 +103,9 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparEscudoPunialTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
@@ -118,8 +117,8 @@ public class LanceroTest {
 
 	@Test
 	public void equiparPunialEscudoTest(){
-		unidad = new Lancero(1);
-		unidad = new Punial(unidad);
+		unidad = new Caballero(1);
+		unidad = new Puñal(unidad);
 		unidad = new Escudo(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -132,8 +131,8 @@ public class LanceroTest {
 		
 	@Test
 	public void equiparPunialCapaTest(){
-		unidad = new Lancero(1);
-		unidad = new Punial(unidad);
+		unidad = new Caballero(1);
+		unidad = new Puñal(unidad);
 		unidad = new Capa(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -146,9 +145,9 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparCapaPunialTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
@@ -160,10 +159,10 @@ public class LanceroTest {
 		
 	@Test
 	public void equiparEscudoCapaPunialTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -175,10 +174,10 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparCapaEscudoPunialTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -190,10 +189,10 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparCapaPunialEscudoTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
@@ -205,10 +204,10 @@ public class LanceroTest {
 	
 	@Test
 	public void equiparPunialCapaEscudoTest(){
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
-		unidad = new Punial(unidad);
+		unidad = new Puñal(unidad);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*.1)   == 0 && 
@@ -217,13 +216,11 @@ public class LanceroTest {
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
-
-	
 	
 	@Test
 	public void distanciaNoValidaParaCombate(){
-		Unidad u1 = new Lancero(0);
-		Unidad u2 = new Soldado(4);
+		Unidad u1 = new Caballero(0);
+		Unidad u2 = new Soldado(3);
 		assertFalse(u1.puedoAtacar(u2));
 		u1 = new Caballero(0);
 		u2 = new Arquero(0);
@@ -232,10 +229,10 @@ public class LanceroTest {
 	
 	@Test
 	public void distanciaValidaParaCombate(){
-		Unidad u1 = new Lancero(5);
+		Unidad u1 = new Caballero(5);
 		Unidad u2 = new Soldado(6);
 
-		for(int i=0 ; i<3; i++){
+		for(int i=0 ; i<2; i++){
 			assertTrue(u1.puedoAtacar(u2));
 			u2.avanzar();
 		}
@@ -243,38 +240,40 @@ public class LanceroTest {
 	
 	@Test
 	public void puedeRestaurarEnergia(){
-		unidad = new Lancero(1);
-		assertFalse(unidad.puedeRestauraEnergia());
+		unidad = new Caballero(1);
+		unidad.atacar(new Soldado(2));
+		assertTrue(unidad.puedeRestauraEnergia());
 	}
 
 	@Test
 	public void agotarEnergia(){
-		unidad = new Lancero(1);
-		Unidad victima = new Soldado(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
 			if(!victima.conVida())
 				victima = new Soldado(3);
 		}
-		assertEquals(unidad.getEnergia(), ENERGIA, 0.1);
+		assertEquals(unidad.getEnergia(), 0, 0.1);
 	}
 	
 	@Test
 	public void restaurarEnergia(){
-		unidad = new Lancero(1);
-		Unidad victima = new Soldado(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
 			unidad.atacar(victima);
 		}
-		double e = unidad.getEnergia();
 		unidad.restaurarEnergia();
-		assertEquals(unidad.getEnergia(), e, 0.1);
+		assertEquals(unidad.getEnergia(), ENERGIA, 0.1);
 		
 	}
-
+	
+	
 	@Test
 	public void noPoderAtacarMuertos(){
-		unidad = new Lancero(1);
-		Unidad victima = new Lancero(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
 		while(victima.conVida()){
 			unidad.atacar(victima);
 			unidad.restaurarEnergia();
@@ -285,8 +284,8 @@ public class LanceroTest {
 	
 	@Test
 	public void noAtacarMuertos(){
-		unidad = new Lancero(1);
-		Unidad victima = new Lancero(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
 		while(victima.conVida()){
 			unidad.atacar(victima);
 			unidad.restaurarEnergia();
@@ -298,14 +297,14 @@ public class LanceroTest {
 	@Test
 	public void noSeAutoAtaca(){
 
-		unidad = new Lancero(1);
+		unidad = new Caballero(1);
 		assertFalse(unidad.puedoAtacar(unidad));
 	}
 
 	@Test
 	public void noPoderAtacarEstandoMuerto(){
-		unidad = new Lancero(1);
-		Unidad victima = new Lancero(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
 		while(victima.conVida()){
 			unidad.atacar(victima);
 			unidad.restaurarEnergia();
@@ -315,8 +314,8 @@ public class LanceroTest {
 
 	@Test
 	public void noAtacarEstandoMuerto(){
-		unidad = new Lancero(1);
-		Unidad victima = new Lancero(2);
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
 		while(victima.conVida()){
 			unidad.atacar(victima);
 			unidad.restaurarEnergia();
@@ -325,4 +324,34 @@ public class LanceroTest {
 	
 		
 	}
+	
+	@Test
+	public void noPoderAtacarAgotado(){
+		unidad = new Caballero(1);
+		Unidad victima = new Soldado(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		System.out.println(unidad.getEnergia());
+		assertFalse(unidad.puedoAtacar(new Soldado(200)));
+	}	
+	
+	@Test
+	public void noAtacarAgotado(){
+		unidad = new Caballero(1);
+		Unidad victima = new Caballero(3);
+		for(double i = ENERGIA ; i>0 ; i-= 1){
+			unidad.atacar(victima);
+			if(!victima.conVida())
+				victima = new Soldado(3);
+		}
+		assertEquals(unidad.atacar(new Soldado(200)), 0, 0.1);
+		
+	}
+	
 }
+
+	
+	

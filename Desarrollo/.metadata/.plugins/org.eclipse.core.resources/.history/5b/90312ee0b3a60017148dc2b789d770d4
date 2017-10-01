@@ -1,36 +1,7 @@
 package personaje;
 /**
  * @author adrian
- * <h1>Clase Unidad</h1>
- * <h4>Clase que define a la unidad basica</h4>
- * <h6>Metodos:</h6>
- *<ul>
- *		<li>getPosicion()</li>
- *		<li>conVida()</li>
- *		<li>puedoAtacar(Unidad victima)</li>
- *		<li>mismoPersonaje(Unidad victima)</li>
- *		<li>getNumero()</li>
- *		<li>consumirEnergia()</li>
- *		<li>atacar(Unidad victima)</li>
- *		<li>recibirDanio(double valor)</li>
- *		<li>setSalud(double d)</li>
- *		<li>getGastoEnergetico()</li>
- *		<li>getAtaque()</li>
- *		<li>getDefensa(double valor)</li>
- *		<li>getAtaqueBase()</li>
- *		<li>getDefensaBase()</li>
- *		<li>getEnergiaMaxima()</li>
- *		<li>puedeRestauraEnergia()</li>
- *		<li>restaurarEnergia()</li>
- *		<li>getEnergia()</li>
- *		<li>setEnergia(int d)</li>
- *		<li>getSalud() </li>
- *		<li>retroceder()</li>
- *		<li>avanzar() </li>
- *		<li>toString()</li>
- *</ul>
- *@see item.ItemDecorator
- *@see personaje.Unidad
+ *
  */
 public abstract class Unidad {
 

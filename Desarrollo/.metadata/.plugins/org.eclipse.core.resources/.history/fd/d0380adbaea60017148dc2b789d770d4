@@ -4,7 +4,7 @@ import personaje.Unidad;
 
 /**
  * @author adrian
- * <h1>Clase Escudo</h1>
+ * <h1>Clse Escudo</h1>
  * <h4>Clase que permite agregar las funcionalidades que implica el poseer una escudo</h4>
  * <h5>DEFENSA: 40% mas </h5>
  * <h6>Metodos:</h6>
@@ -15,27 +15,24 @@ import personaje.Unidad;
  *@see item.ItemDecorator
  *@see personaje.Unidad
  */
-public class Escudo extends ItemDecorator {
-
-	/**
-	 * CONSTRUCTOR REQUERIDO POR EL PATRON
-	 */
-	public Escudo(Unidad peleable){
+public class Punial extends ItemDecorator {
+	
+	public Punial(Unidad peleable){
 		super(peleable);
 	}
-	/**
-	 * Devuelve la nueva defensa que se adquiere por portar un escudo
-	 * */
-	public double getDefensa(double valor){
-		return getUnidad().getDefensa(valor) +  valor*0.4;
+	public double getAtaque(){
+		return getUnidad().getAtaque()+3;
 	}
-
+	public double getDefensa(double valor){
+		return getUnidad().getDefensa(valor)+3;
+	}
 	/**
 	 * Imprime el estado del personaje
 	 * */
 	public String toString() {
-		return getUnidad() + ", Escudo";
+		return getUnidad() + ", Punial";
 	}
 	
-
+	
+	
 }
