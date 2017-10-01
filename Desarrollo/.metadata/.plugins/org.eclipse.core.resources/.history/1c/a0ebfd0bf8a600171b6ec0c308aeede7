@@ -18,7 +18,7 @@ public class ArqueroTest {
 	private final double DEFENSA = 0;
 	private final double ENERGIA_CONSUMIDA = 1;
 	private final int POS1=0;
-	private final int POS2=3;
+	private final int POS2=0;
 
 	private Unidad unidad;
 	
