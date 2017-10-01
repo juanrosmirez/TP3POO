@@ -27,7 +27,7 @@ public class LanceroTest {
 
 	
 	@Test
-	public void crearNuevoTest(){
+	public void crearNuevoTest() throws Exception{
 		unidad = new Lancero(1);
 		assertTrue(
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
@@ -39,7 +39,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void equiparEscudoTest(){
+	public void equiparEscudoTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Escudo(unidad);
 		assertTrue(
@@ -52,7 +52,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparPunialTest(){
+	public void equiparPunialTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Punial(unidad);
 		assertTrue(
@@ -65,7 +65,7 @@ public class LanceroTest {
 	}	
 
 	@Test
-	public void equiparCapaTest(){
+	public void equiparCapaTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		assertTrue(
@@ -78,7 +78,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparEscudoCapaTest(){
+	public void equiparEscudoCapaTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
@@ -92,7 +92,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparCapaEscudoTest(){
+	public void equiparCapaEscudoTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
@@ -106,7 +106,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparEscudoPunialTest(){
+	public void equiparEscudoPunialTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Punial(unidad);
@@ -120,7 +120,7 @@ public class LanceroTest {
 	}	
 
 	@Test
-	public void equiparPunialEscudoTest(){
+	public void equiparPunialEscudoTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Punial(unidad);
 		unidad = new Escudo(unidad);
@@ -134,7 +134,7 @@ public class LanceroTest {
 	}	
 		
 	@Test
-	public void equiparPunialCapaTest(){
+	public void equiparPunialCapaTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Punial(unidad);
 		unidad = new Capa(unidad);
@@ -148,7 +148,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparCapaPunialTest(){
+	public void equiparCapaPunialTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		unidad = new Punial(unidad);
@@ -162,7 +162,7 @@ public class LanceroTest {
 	}	
 		
 	@Test
-	public void equiparEscudoCapaPunialTest(){
+	public void equiparEscudoCapaPunialTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Escudo(unidad);
 		unidad = new Capa(unidad);
@@ -177,7 +177,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparCapaEscudoPunialTest(){
+	public void equiparCapaEscudoPunialTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
@@ -192,7 +192,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparCapaPunialEscudoTest(){
+	public void equiparCapaPunialEscudoTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
@@ -207,7 +207,7 @@ public class LanceroTest {
 	}	
 	
 	@Test
-	public void equiparPunialCapaEscudoTest(){
+	public void equiparPunialCapaEscudoTest() throws Exception{
 		unidad = new Lancero(1);
 		unidad = new Capa(unidad);
 		unidad = new Escudo(unidad);
@@ -224,7 +224,7 @@ public class LanceroTest {
 	
 	
 	@Test
-	public void distanciaNoValidaParaCombate(){
+	public void distanciaNoValidaParaCombate() throws Exception{
 		Unidad u1 = new Lancero(0);
 		Unidad u2 = new Soldado(4);
 		assertFalse(u1.puedoAtacar(u2));
@@ -234,7 +234,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void distanciaValidaParaCombate(){
+	public void distanciaValidaParaCombate() throws Exception{
 		Unidad u1 = new Lancero(5);
 		Unidad u2 = new Soldado(6);
 
@@ -245,13 +245,13 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void puedeRestaurarEnergia(){
+	public void puedeRestaurarEnergia() throws Exception{
 		unidad = new Lancero(1);
 		assertFalse(unidad.puedeRestauraEnergia());
 	}
 
 	@Test
-	public void agotarEnergia(){
+	public void agotarEnergia() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Soldado(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
@@ -262,7 +262,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void restaurarEnergia(){
+	public void restaurarEnergia() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Soldado(2);
 		for(double i = ENERGIA ; i>0 ; i-= 1){
@@ -275,7 +275,7 @@ public class LanceroTest {
 	}
 
 	@Test
-	public void noPoderAtacarMuertos(){
+	public void noPoderAtacarMuertos() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Lancero(2);
 		while(victima.conVida()){
@@ -287,7 +287,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void noAtacarMuertos(){
+	public void noAtacarMuertos() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Lancero(2);
 		while(victima.conVida()){
@@ -299,14 +299,14 @@ public class LanceroTest {
 	}
 
 	@Test
-	public void noSeAutoAtaca(){
+	public void noSeAutoAtaca() throws Exception{
 
 		unidad = new Lancero(1);
 		assertFalse(unidad.puedoAtacar(unidad));
 	}
 
 	@Test
-	public void noPoderAtacarEstandoMuerto(){
+	public void noPoderAtacarEstandoMuerto() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Lancero(2);
 		while(victima.conVida()){
@@ -317,7 +317,7 @@ public class LanceroTest {
 	}
 
 	@Test
-	public void noAtacarEstandoMuerto(){
+	public void noAtacarEstandoMuerto() throws Exception{
 		unidad = new Lancero(1);
 		Unidad victima = new Lancero(2);
 		while(victima.conVida()){
@@ -328,19 +328,61 @@ public class LanceroTest {
 	
 		
 	}
-	
+
+	@Test
+	public void noPermiteMutipleEscudo() throws Exception{
+		unidad = new Lancero(1);
+		unidad = new Escudo(unidad);
+		unidad = new Punial(unidad);
+		try{
+			unidad = new Escudo(unidad);
+			assertTrue(false);
+		}
+		catch(Exception ex){
+			unidad = new Capa(unidad);
+			assertTrue(true);
+		}
+	}
+	@Test
+	public void noPermiteMutiplePunial() throws Exception{
+		unidad = new Lancero(1);
+		unidad = new Escudo(unidad);
+		unidad = new Punial(unidad);
+		try{
+			unidad = new Punial(unidad);
+			assertTrue(false);
+		}
+		catch(Exception ex){
+			unidad = new Capa(unidad);
+			assertTrue(true);
+		}
+	}
+	@Test
+	public void noPermiteMutipleCapa() throws Exception{
+		unidad = new Lancero(1);
+		unidad = new Capa(unidad);
+		unidad = new Punial(unidad);
+		try{
+			unidad = new Capa(unidad);
+			assertTrue(false);
+		}
+		catch(Exception ex){
+			unidad = new Escudo(unidad);
+			assertTrue(true);
+		}
+	}
 
 
 	/////////////LUCHO MIRAR DESDE ACA PARA ABAJO PARA BASARTE PARA LOS OTROS TEST
 	@Test
-	public void baseAtacadoPorLanceroBase(){
+	public void baseAtacadoPorLanceroBase() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
 	}
 	@Test
-	public void baseAtacadoPorLanceroConEscudo(){
+	public void baseAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Escudo(atacante);
@@ -348,7 +390,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
 	}
 	@Test
-	public void baseAtacadoPorLanceroConPunial(){
+	public void baseAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Punial(atacante);
@@ -356,7 +398,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE +3));
 	}
 	@Test
-	public void baseAtacadoPorLanceroConCapa(){
+	public void baseAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Capa(atacante);
@@ -364,7 +406,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*.1));
 	}
 	@Test
-	public void baseAtacadoPorLanceroConEscudoYPunial(){
+	public void baseAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Escudo(atacante);
@@ -373,7 +415,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE + 3));
 	}
 	@Test
-	public void baseAtacadoPorLanceroConEscudoYCapa(){
+	public void baseAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Escudo(atacante);
@@ -382,7 +424,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*.1));
 	}
 	@Test
-	public void baseAtacadoPorLanceroConCapaYPunial(){
+	public void baseAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Lancero(POS1);
 		Unidad atacante = new Lancero(POS2);
 		atacante = new Capa(atacante);
@@ -393,7 +435,7 @@ public class LanceroTest {
 	
 	//////
 	@Test
-	public void conEscudoAtacadoPorLanceroBase(){
+	public void conEscudoAtacadoPorLanceroBase() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante = new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -401,7 +443,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConEscudo(){
+	public void conEscudoAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Escudo(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -409,7 +451,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConPunial(){
+	public void conEscudoAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Punial(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -417,7 +459,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConCapa(){
+	public void conEscudoAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Capa(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -427,7 +469,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConEscudoYPunial(){
+	public void conEscudoAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Escudo(new Punial(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -435,7 +477,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConEscudoYCapa(){
+	public void conEscudoAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Escudo(new Capa(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -445,7 +487,7 @@ public class LanceroTest {
 	}
 	
 	@Test
-	public void conEscudoAtacadoPorLanceroConCapaYPunial(){
+	public void conEscudoAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Escudo(new Lancero(POS1));
 		Unidad atacante =  new Capa(new Punial(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -458,7 +500,7 @@ public class LanceroTest {
 
 	//////
 	@Test
-	public void conPunialAtacadoPorLanceroBase(){
+	public void conPunialAtacadoPorLanceroBase() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -466,7 +508,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConEscudo(){
+	public void conPunialAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Escudo(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -474,7 +516,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConPunial(){
+	public void conPunialAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Punial(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -482,7 +524,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConCapa(){
+	public void conPunialAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Capa(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -491,7 +533,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConEscudoYPunial(){
+	public void conPunialAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Escudo( new Punial(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -499,7 +541,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConEscudoYCapa(){
+	public void conPunialAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Punial(new Lancero(POS1));
 		Unidad atacante =  new Capa( new Escudo(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -508,7 +550,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialAtacadoPorLanceroConCapaYPunial(){
+	public void conPunialAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Punial(new Lancero(0));
 		Unidad atacante =  new Capa( new Punial(new Lancero(0)));
 		atacante.atacar(unidad);
@@ -520,7 +562,7 @@ public class LanceroTest {
 
 	//////
 	@Test
-	public void conCapaAtacadoPorLanceroBase(){
+	public void conCapaAtacadoPorLanceroBase() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante =  new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -528,7 +570,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConEscudo(){
+	public void conCapaAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Escudo( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -536,7 +578,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConPunial(){
+	public void conCapaAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Punial( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -544,7 +586,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConCapa(){
+	public void conCapaAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Capa( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -552,7 +594,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConEscudoYPunial(){
+	public void conCapaAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Escudo(new Punial( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -560,7 +602,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConEscudoYCapa(){
+	public void conCapaAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Escudo(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -568,7 +610,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaAtacadoPorLanceroConCapaYPunial(){
+	public void conCapaAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Capa(new Lancero(POS1));
 		Unidad atacante = new Punial(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -579,7 +621,7 @@ public class LanceroTest {
 	
 	//////
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroBase(){
+	public void conCapaYEscudoAtacadoPorLanceroBase() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -587,7 +629,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConEscudo(){
+	public void conCapaYEscudoAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Escudo(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -595,7 +637,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConPunial(){
+	public void conCapaYEscudoAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Punial(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -604,7 +646,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConCapa(){
+	public void conCapaYEscudoAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Capa(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -613,7 +655,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConEscudoYPunial(){
+	public void conCapaYEscudoAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Escudo( new Punial(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -622,7 +664,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConEscudoYCapa(){
+	public void conCapaYEscudoAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante =new Escudo( new Capa(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -631,7 +673,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conCapaYEscudoAtacadoPorLanceroConCapaYPunial(){
+	public void conCapaYEscudoAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Escudo(new Capa(new Lancero(POS1)));
 		Unidad atacante = new Punial( new Capa(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -642,7 +684,7 @@ public class LanceroTest {
 	
 //////
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroBase(){
+	public void conPunialYEscudoAtacadoPorLanceroBase() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -651,7 +693,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConEscudo(){
+	public void conPunialYEscudoAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Escudo(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -660,7 +702,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConPunial(){
+	public void conPunialYEscudoAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Punial( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -669,7 +711,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConCapa(){
+	public void conPunialYEscudoAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Capa( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -678,7 +720,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConEscudoYPunial(){
+	public void conPunialYEscudoAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Escudo(new Punial( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -687,7 +729,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConEscudoYCapa(){
+	public void conPunialYEscudoAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Escudo(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -696,7 +738,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYEscudoAtacadoPorLanceroConCapaYPunial(){
+	public void conPunialYEscudoAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Escudo(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Punial(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -707,7 +749,7 @@ public class LanceroTest {
 	
 	//////
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroBase(){
+	public void conPunialYCapaAtacadoPorLanceroBase() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante =new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -716,7 +758,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConEscudo(){
+	public void conPunialYCapaAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Escudo(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -725,7 +767,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConPunial(){
+	public void conPunialYCapaAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Punial(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -734,7 +776,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConCapa(){
+	public void conPunialYCapaAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Capa(new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -743,7 +785,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConEscudoYPunial(){
+	public void conPunialYCapaAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Escudo(new Punial(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -752,7 +794,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConEscudoYCapa(){
+	public void conPunialYCapaAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS1)));
 		Unidad atacante = new Escudo(new Capa(new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -761,7 +803,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialYCapaAtacadoPorLanceroConCapaYPunial(){
+	public void conPunialYCapaAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Capa(new Punial(new Lancero(POS2)));
 		Unidad atacante = new Punial(new Capa(new Lancero(POS1)));
 		atacante.atacar(unidad);
@@ -773,7 +815,7 @@ public class LanceroTest {
 	
 	//////
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroBase(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroBase() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Lancero(POS2);
 		atacante.atacar(unidad);
@@ -782,7 +824,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudo(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudo() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Escudo( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -791,7 +833,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConPunial(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConPunial() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Punial( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -800,7 +842,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConCapa(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConCapa() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Capa( new Lancero(POS2));
 		atacante.atacar(unidad);
@@ -809,7 +851,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudoYPunial(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudoYPunial() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Escudo(new Punial( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -818,7 +860,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudoYCapa(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConEscudoYCapa() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Escudo(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -827,7 +869,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConCapaYPunial(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConCapaYPunial() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Punial(new Capa( new Lancero(POS2)));
 		atacante.atacar(unidad);
@@ -836,7 +878,7 @@ public class LanceroTest {
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
-	public void conPunialCapaYEscudoAtacadoPorLanceroConCapaPunialYEscudo(){
+	public void conPunialCapaYEscudoAtacadoPorLanceroConCapaPunialYEscudo() throws Exception{
 		unidad = new Capa(new Escudo(new Punial(new Lancero(POS1))));
 		Unidad atacante = new Escudo(new Punial(new Capa( new Lancero(POS2))));
 		atacante.atacar(unidad);

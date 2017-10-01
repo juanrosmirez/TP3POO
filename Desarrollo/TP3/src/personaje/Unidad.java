@@ -162,6 +162,10 @@ public abstract class Unidad {
 	}
 	
 	
+	public String getCharItem(){
+		return "-";
+	}
+	
 	
 	
 }

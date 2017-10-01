@@ -26,9 +26,13 @@ public class Capa extends ItemDecorator {
 	
 	/**
 	 * CONSTRUCTOR REQUERIDO POR EL PATRON DECORATOR
+	 * @throws Exception 
 	 */
-	public Capa(Unidad unidad){
+	public Capa(Unidad unidad) throws Exception{
 		super(unidad);
+		if(unidad.getCharItem().contains("C"))
+			throw new Exception("Ya posee uno");
+		
 	}
 	
 	/**
@@ -74,6 +78,10 @@ public class Capa extends ItemDecorator {
 	@Override
 	public String toString() {
 		return getUnidad() + ", Capa";
+	}
+
+	public String getCharItem(){
+		return  getUnidad() .getCharItem() + "C";
 	}
 	
 }

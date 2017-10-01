@@ -20,9 +20,12 @@ public class Punial extends ItemDecorator {
 
 	/**
 	 * CONSTRUCTOR REQUERIDO POR EL PATRON
+	 * @throws Exception 
 	 */
-	public Punial(Unidad peleable){
-		super(peleable);
+	public Punial(Unidad unidad) throws Exception{
+		super(unidad);
+		if(unidad.getCharItem().contains("P"))
+			throw new Exception("Ya posee uno");
 	}
 	
 	/**
@@ -44,6 +47,10 @@ public class Punial extends ItemDecorator {
 		return getUnidad() + ", Punial";
 	}
 	
+	
+	public String getCharItem(){
+		return  getUnidad().getCharItem() + "P";
+	}
 	
 	
 }

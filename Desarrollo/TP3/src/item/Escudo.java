@@ -19,9 +19,12 @@ public class Escudo extends ItemDecorator {
 
 	/**
 	 * CONSTRUCTOR REQUERIDO POR EL PATRON
+	 * @throws Exception 
 	 */
-	public Escudo(Unidad peleable){
-		super(peleable);
+	public Escudo(Unidad unidad) throws Exception{
+		super(unidad);
+		if(unidad.getCharItem().contains("E"))
+			throw new Exception("Ya posee uno");
 	}
 	/**
 	 * Devuelve la nueva defensa que se adquiere por portar un escudo
@@ -35,6 +38,10 @@ public class Escudo extends ItemDecorator {
 	 * */
 	public String toString() {
 		return getUnidad() + ", Escudo";
+	}
+
+	public String getCharItem(){
+		return  getUnidad() .getCharItem() + "E";
 	}
 	
 
