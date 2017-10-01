@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CaballeroTest" project="TP3" tests="26" started="26" failures="0" errors="0" ignored="0">
+  <testsuite name="personaje.CaballeroTest" time="0.023">
+    <testcase name="equiparCapaEscudoPunialTest" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="puedeRestaurarEnergia" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noAtacarMuertos" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="restaurarEnergia" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="equiparPunialCapaTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noPoderAtacarAgotado" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="equiparPunialTest" classname="personaje.CaballeroTest" time="0.002"/>
+    <testcase name="distanciaNoValidaParaCombate" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="distanciaValidaParaCombate" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noPoderAtacarEstandoMuerto" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="equiparEscudoPunialTest" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="equiparCapaPunialTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="equiparCapaPunialEscudoTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="equiparCapaTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noAtacarAgotado" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="noAtacarEstandoMuerto" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="crearNuevoTest" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="equiparEscudoTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="agotarEnergia" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="equiparPunialCapaEscudoTest" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noSeAutoAtaca" classname="personaje.CaballeroTest" time="0.0"/>
+    <testcase name="noPoderAtacarMuertos" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="equiparCapaEscudoTest" classname="personaje.CaballeroTest" time="0.003"/>
+    <testcase name="equiparEscudoCapaTest" classname="personaje.CaballeroTest" time="0.001"/>
+    <testcase name="equiparEscudoCapaPunialTest" classname="personaje.CaballeroTest" time="0.002"/>
+    <testcase name="equiparPunialEscudoTest" classname="personaje.CaballeroTest" time="0.006"/>
+  </testsuite>
+</testrun>
