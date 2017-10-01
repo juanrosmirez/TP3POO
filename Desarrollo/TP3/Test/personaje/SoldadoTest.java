@@ -17,6 +17,9 @@ public class SoldadoTest {
 	private final double ENERGIA = 100;
 	private final double DEFENSA = 0;
 	private final double ENERGIA_CONSUMIDA = 10;
+	private final int POS1=0;
+	private final int POS2=0;
+	
 
 	private Unidad unidad;
 	
@@ -347,42 +350,42 @@ public class SoldadoTest {
 		
 	}
 
-	/////////////LUCHO MIRAR DESDE ACA PARA ABAJO
+	/////////////LUCHO MIRAR DESDE ACA PARA ABAJO PARA BASARTE PARA LOS OTROS TEST
 	@Test
 	public void baseAtacadoPorSoldadoBase(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConEscudo(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Escudo(atacante);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConPunial(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Punial(atacante);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE +3));
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConCapa(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Capa(atacante);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*.1));
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConEscudoYPunial(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Escudo(atacante);
 		atacante = new Punial(atacante);
 		atacante.atacar(unidad);
@@ -390,8 +393,8 @@ public class SoldadoTest {
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConEscudoYCapa(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Escudo(atacante);
 		atacante = new Capa(atacante);
 		atacante.atacar(unidad);
@@ -399,8 +402,8 @@ public class SoldadoTest {
 	}
 	@Test
 	public void baseAtacadoPorSoldadoConCapaYPunial(){
-		unidad = new Soldado(0);
-		Unidad atacante = new Soldado(0);
+		unidad = new Soldado(POS1);
+		Unidad atacante = new Soldado(POS2);
 		atacante = new Capa(atacante);
 		atacante = new Punial(atacante);
 		atacante.atacar(unidad);
@@ -410,32 +413,32 @@ public class SoldadoTest {
 	//////
 	@Test
 	public void conEscudoAtacadoPorSoldadoBase(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante = new Soldado(0);
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante = new Soldado(POS2);
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - (ATAQUE-ATAQUE*0.4)));
 	}
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConEscudo(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Escudo(new Soldado(0));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Escudo(new Soldado(POS2));
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - (ATAQUE-ATAQUE*0.4)));
 	}
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConPunial(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Punial(new Soldado(0));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Punial(new Soldado(POS2));
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - ((ATAQUE+3)-(ATAQUE+3)*.4)));
 	}
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConCapa(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Capa(new Soldado(0));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Capa(new Soldado(POS2));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE - ATAQUE*.1; 
 		valorAtaque = valorAtaque - valorAtaque*.4;
@@ -444,16 +447,16 @@ public class SoldadoTest {
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConEscudoYPunial(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Escudo(new Punial(new Soldado(0)));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Escudo(new Punial(new Soldado(POS2)));
 		atacante.atacar(unidad);
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - ((ATAQUE+3)-(ATAQUE+3)*.4)));
 	}
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConEscudoYCapa(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Escudo(new Capa(new Soldado(0)));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Escudo(new Capa(new Soldado(POS2)));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE - ATAQUE*.1; 
 		valorAtaque = valorAtaque - valorAtaque*.4;
@@ -462,8 +465,8 @@ public class SoldadoTest {
 	
 	@Test
 	public void conEscudoAtacadoPorSoldadoConCapaYPunial(){
-		unidad = new Escudo(new Soldado(0));
-		Unidad atacante =  new Capa(new Punial(new Soldado(0)));
+		unidad = new Escudo(new Soldado(POS1));
+		Unidad atacante =  new Capa(new Punial(new Soldado(POS2)));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE - ATAQUE*.1; 
 		valorAtaque+=3;
@@ -475,32 +478,32 @@ public class SoldadoTest {
 	//////
 	@Test
 	public void conPunialAtacadoPorSoldadoBase(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Soldado(0);
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Soldado(POS2);
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE + 3;
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialAtacadoPorSoldadoConEscudo(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Escudo(new Soldado(0));
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Escudo(new Soldado(POS2));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE + 3;
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialAtacadoPorSoldadoConPunial(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Punial(new Soldado(0));
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Punial(new Soldado(POS2));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE + 3 + 3;
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialAtacadoPorSoldadoConCapa(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Capa(new Soldado(0));
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Capa(new Soldado(POS2));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE - ATAQUE * 0.1;
 		valorAtaque += 3;
@@ -508,16 +511,16 @@ public class SoldadoTest {
 	}
 	@Test
 	public void conPunialAtacadoPorSoldadoConEscudoYPunial(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Escudo( new Punial(new Soldado(0)));
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Escudo( new Punial(new Soldado(POS2)));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE+3+3;
 		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialAtacadoPorSoldadoConEscudoYCapa(){
-		unidad = new Punial(new Soldado(0));
-		Unidad atacante =  new Capa( new Escudo(new Soldado(0)));
+		unidad = new Punial(new Soldado(POS1));
+		Unidad atacante =  new Capa( new Escudo(new Soldado(POS2)));
 		atacante.atacar(unidad);
 		double valorAtaque = ATAQUE - ATAQUE * 0.1;
 		valorAtaque += 3;
@@ -537,95 +540,330 @@ public class SoldadoTest {
 	//////
 	@Test
 	public void conCapaAtacadoPorSoldadoBase(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante =  new Soldado(POS2);
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE ;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConEscudo(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Escudo( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE ;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConPunial(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Punial( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConCapa(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Capa( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConEscudoYPunial(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Escudo(new Punial( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConEscudoYCapa(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Escudo(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaAtacadoPorSoldadoConCapaYPunial(){
+		unidad = new Capa(new Soldado(POS1));
+		Unidad atacante = new Punial(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	
 	
 	//////
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoBase(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Soldado(POS2);
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConEscudo(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Escudo(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConPunial(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Punial(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConCapa(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Capa(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConEscudoYPunial(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Escudo( new Punial(new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConEscudoYCapa(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante =new Escudo( new Capa(new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conCapaYEscudoAtacadoPorSoldadoConCapaYPunial(){
+		unidad = new Escudo(new Capa(new Soldado(POS1)));
+		Unidad atacante = new Punial( new Capa(new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1 + 3;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	
 //////
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoBase(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Soldado(POS2);
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConEscudo(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Escudo(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConPunial(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Punial( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConCapa(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Capa( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE * 0.1;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConEscudoYPunial(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Escudo(new Punial( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConEscudoYCapa(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Escudo(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE -ATAQUE * 0.1;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYEscudoAtacadoPorSoldadoConCapaYPunial(){
+		unidad = new Escudo(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Punial(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE -ATAQUE * 0.1 +3;
+		valorAtaque = valorAtaque - valorAtaque*.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	
 	//////
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoBase(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante =new Soldado(POS2);
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConEscudo(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Escudo(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConPunial(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Punial(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE+3;
+		valorAtaque = valorAtaque  + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConCapa(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Capa(new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConEscudoYPunial(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Escudo(new Punial(new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE +3;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConEscudoYCapa(){
+		unidad = new Capa(new Punial(new Soldado(POS1)));
+		Unidad atacante = new Escudo(new Capa(new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	@Test
 	public void conPunialYCapaAtacadoPorSoldadoConCapaYPunial(){
+		unidad = new Capa(new Punial(new Soldado(POS2)));
+		Unidad atacante = new Punial(new Capa(new Soldado(POS1)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE *0.1 + 3;
+		valorAtaque = valorAtaque + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
+	
+	
+	//////
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoBase(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Soldado(POS2);
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConEscudo(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Escudo( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConPunial(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Punial( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE + 3;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConCapa(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Capa( new Soldado(POS2));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*0.1;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConEscudoYPunial(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Escudo(new Punial( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE + 3;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConEscudoYCapa(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Escudo(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE * .1;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConCapaYPunial(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Punial(new Capa( new Soldado(POS2)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE * .1 + 3;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	@Test
+	public void conPunialCapaYEscudoAtacadoPorSoldadoConCapaPunialYEscudo(){
+		unidad = new Capa(new Escudo(new Punial(new Soldado(POS1))));
+		Unidad atacante = new Escudo(new Punial(new Capa( new Soldado(POS2))));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE * .1 + 3;
+		valorAtaque = valorAtaque - valorAtaque*0.4 + 3;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	
 	
 	///DESPUES ABRIA QUE REPETIR TODO LO MISMO PERO AHORA UN SOLDADO ATACADO POR UN ARQUERO LUEGO POR UN CABALLERO Y LUEGO POR UN LANCERO
 }
