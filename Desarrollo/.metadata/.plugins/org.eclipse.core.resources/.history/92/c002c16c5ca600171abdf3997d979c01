@@ -62,7 +62,9 @@ public class Capa extends ItemDecorator {
 	
 
 	public void consumirEnergia(){
-		this.setEnergia(getUnidad().getEnergia() - (int)getGastoEnergetico()) ;
+		double g = getGastoEnergetico();
+		System.out.println(g/2);
+	  this.setEnergia(getUnidad().getEnergia() - (int)getGastoEnergetico()/2) ;
 	}
 	
 }

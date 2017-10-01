@@ -77,8 +77,6 @@ public abstract class ItemDecorator extends Unidad {
 		return this.unidad.getDefensa();
 	}
 
-	public void consumirEnergia(){
-		this.unidad.consumirEnergia();
-	}
+	
 
 }

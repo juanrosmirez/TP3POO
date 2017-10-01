@@ -18,7 +18,6 @@ public class Juego {
 		victima = new Escudo(victima);
 		victima = new Puñal(victima);
 		unidad.atacar(victima);
-		victima.atacar(unidad);
 
 
 		System.out.print("ENERGIA CON CAPA= ");

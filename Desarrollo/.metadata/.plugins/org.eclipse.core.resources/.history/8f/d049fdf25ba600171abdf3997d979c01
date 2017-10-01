@@ -55,8 +55,7 @@ public abstract class Unidad {
 	public final double atacar(Unidad victima){
 		if (!puedoAtacar(victima))
 			return 0;
-		consumirEnergia();
-		//setEnergia(getEnergia() - (int)getGastoEnergetico());
+		setEnergia(getEnergia() - (int)getGastoEnergetico());
 		return victima.recibirDanio(getAtaque());
 	}
 	

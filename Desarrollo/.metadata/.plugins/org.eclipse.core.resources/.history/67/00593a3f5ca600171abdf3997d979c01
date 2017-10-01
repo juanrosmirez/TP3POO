@@ -59,10 +59,4 @@ public class Capa extends ItemDecorator {
 		// TODO Auto-generated method stub
 		return getUnidad().getEnergiaMaxima()*2;
 	}
-	
-
-	public void consumirEnergia(){
-		this.setEnergia(getUnidad().getEnergia() - (int)getGastoEnergetico()) ;
-	}
-	
 }

@@ -48,15 +48,10 @@ public abstract class Unidad {
 		return numero;
 	}
 	
-	public void consumirEnergia(){
-		energia -= getGastoEnergetico(); 
-	}
-	
 	public final double atacar(Unidad victima){
 		if (!puedoAtacar(victima))
 			return 0;
-		consumirEnergia();
-		//setEnergia(getEnergia() - (int)getGastoEnergetico());
+		setEnergia(getEnergia() - (int)getGastoEnergetico());
 		return victima.recibirDanio(getAtaque());
 	}
 	
