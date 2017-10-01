@@ -24,4 +24,5 @@ public class Juego {
 		System.out.println(unidad);
 		System.out.println(victima);
 	}
+
 }
