@@ -38,7 +38,7 @@ public class Escudo extends ItemDecorator {
 	
 	@Override
 	public String toString() {
-		return getUnidad() + ", Escudo";
+		return getUnidad() + " Escudo";
 	}
 	
 

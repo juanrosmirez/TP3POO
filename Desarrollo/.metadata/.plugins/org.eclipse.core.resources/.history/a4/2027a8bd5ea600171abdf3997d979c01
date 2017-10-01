@@ -16,11 +16,5 @@ public class Puñal extends ItemDecorator {
 	public double getDefensa(){
 		return getUnidad().getDefensa()-3;
 	}
-	@Override
-	public String toString() {
-		return getUnidad() + ", Punial";
-	}
-	
-	
 	
 }

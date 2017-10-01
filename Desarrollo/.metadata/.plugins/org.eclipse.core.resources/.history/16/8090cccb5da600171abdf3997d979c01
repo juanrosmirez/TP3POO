@@ -23,8 +23,6 @@ import personaje.Unidad;
  *@see personaje.Unidad
  */
 public class Capa extends ItemDecorator {
-
-	private static final int MULTIPLICADOR_ENERGIA = 2;
 	
 	/**
 	 * CONSTRUCTOR REQUERIDO POR EL PATRON
@@ -43,7 +41,7 @@ public class Capa extends ItemDecorator {
 	 * Devuelve la energia que se tiene portando una capa
 	 * */
 	public int getEnergia(){
-		return getUnidad().getEnergia() * MULTIPLICADOR_ENERGIA;
+		return getUnidad().getEnergia() * 2;
 	}
 	
 	/**
@@ -51,24 +49,20 @@ public class Capa extends ItemDecorator {
 	 * */
 	@Override
 	public double getGastoEnergetico() {
-		return getUnidad().getGastoEnergetico() / MULTIPLICADOR_ENERGIA ;
+		return getUnidad().getGastoEnergetico()/2;
 	}
 
 	/**
 	 * Devuelve la energia maxima que se puede adquirir
 	 * */
 	public int getEnergiaMaxima() {
-		return getUnidad().getEnergiaMaxima() * MULTIPLICADOR_ENERGIA;
+		// TODO Auto-generated method stub
+		return getUnidad().getEnergiaMaxima()*2;
 	}
 	
 
 	public void consumirEnergia(){
 		this.setEnergia(getUnidad().getEnergia() - (int)getGastoEnergetico()) ;
-	}
-	
-	@Override
-	public String toString() {
-		return getUnidad() + ", Capa";
 	}
 	
 }

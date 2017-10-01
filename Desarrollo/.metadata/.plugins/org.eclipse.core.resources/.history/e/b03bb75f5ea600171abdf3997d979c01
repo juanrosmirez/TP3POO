@@ -109,7 +109,7 @@ public abstract class Unidad {
 
 	@Override
 	public String toString() {
-		return "Numero=" + getNumero() + ", posicion=" + getPosicion() + ", salud=" + getSalud() + ", energia=" + getEnergia();
+		return "Numero=" + numero + ", posicion=" + posicion + ", salud=" + salud + ", energia=" + energia;
 	}
 	
 	

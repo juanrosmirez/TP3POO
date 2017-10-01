@@ -68,7 +68,7 @@ public class Capa extends ItemDecorator {
 	
 	@Override
 	public String toString() {
-		return getUnidad() + ", Capa";
+		return getUnidad() + " Capa";
 	}
 	
 }

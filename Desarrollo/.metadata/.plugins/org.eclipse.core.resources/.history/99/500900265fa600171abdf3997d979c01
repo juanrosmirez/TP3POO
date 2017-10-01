@@ -10,17 +10,21 @@ public class Juego {
 		Unidad unidad = new Soldado(0);
 		Unidad victima = new Soldado(0);
 	
+		System.out.println(unidad);	
 		unidad = new Capa(unidad);
-		victima = new Escudo(victima);
-		victima = new Puñal(victima);
-		
+System.out.println(unidad.getEnergia());
 		System.out.println(unidad);
+		
 		System.out.println(victima);
 		
+		victima = new Escudo(victima);
+		victima = new Puñal(victima);
 		unidad.atacar(victima);
 		victima.atacar(unidad);
 
-		System.out.println("resultado ataque");
+		unidad.atacar(victima);
+		unidad.atacar(victima);
+
 		System.out.println(unidad);
 		System.out.println(victima);
 	}

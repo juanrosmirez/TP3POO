@@ -106,13 +106,5 @@ public abstract class Unidad {
 	public final void avanzar() {
 		this.posicion++;
 	}
-
-	@Override
-	public String toString() {
-		return "Numero=" + getNumero() + ", posicion=" + getPosicion() + ", salud=" + getSalud() + ", energia=" + getEnergia();
-	}
-	
-	
-	
 	
 }
