@@ -69,7 +69,7 @@ public class Capa extends ItemDecorator {
 	
 
 	/**
-	 * Imprime el estado del personaje con sus item
+	 * Imprime el estado del personaje
 	 * */
 	@Override
 	public String toString() {

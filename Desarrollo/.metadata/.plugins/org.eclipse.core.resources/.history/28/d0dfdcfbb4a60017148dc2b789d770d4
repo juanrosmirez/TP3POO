@@ -109,54 +109,34 @@ public abstract class Unidad {
 	public abstract double getDefensaBase();
 	public abstract int getEnergiaMaxima();
 	
-	/**Evalua si es posible restaurar la energia de la unidad
-	 */
 	public boolean puedeRestauraEnergia(){
 		if(energia < getEnergiaMaxima())
 			return true;
 		return false;
 	}
 	
-	/**Permite recuperear la energia de la unidad en caso de no cumplirse las condiciones establecdad en puedeRestaurarEnergia no realiza ninguna accion
-	 *@see personaje.Unidad.puedeRestauraEnergia()
-	 */
 	public abstract void restaurarEnergia();
-
-	/**Devuelve la energia actual de la unidad
-	 * @return valor respresentativo de la energia actual
-	 */
+	
 	public int getEnergia(){
 		return energia;
 	}
-
-	/**Modifica la energia de la unidad
-	 */
+	
 	public void setEnergia(int d) {
 		this.energia = d;	
 	}
 
-	/**Devuelve la saluda actual de la unidad
-	 * @return valor respresentativo de la salud actual
-	 */
 	public double getSalud() {
 		return salud;
 	}
 
-	/**Des-incrementa en uno la posicion de la unidad
-	 * */
 	public  void retroceder() {
 		this.posicion--;
 	}
-	
-	/**Incrementa en uno la posicion de la unidad
-	 * */
 	public void avanzar() {
 		this.posicion++;
 	}
 
-	/**
-	 * Imprime el estado de la unidad (numero, posicion, salud, energia)
-	 * */
+	@Override
 	public String toString() {
 		return "Numero=" + getNumero() + ", posicion=" + getPosicion() + ", salud=" + getSalud() + ", energia=" + getEnergia();
 	}

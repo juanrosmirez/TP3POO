@@ -38,7 +38,7 @@ public class Punial extends ItemDecorator {
 		return getUnidad().getDefensa(valor)+3;
 	}
 	/**
-	 * Imprime el estado del personaje con sus item
+	 * Imprime el estado del personaje
 	 * */
 	public String toString() {
 		return getUnidad() + ", Punial";

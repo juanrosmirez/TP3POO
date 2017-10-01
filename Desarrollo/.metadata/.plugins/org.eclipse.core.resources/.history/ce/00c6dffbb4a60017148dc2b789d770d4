@@ -31,7 +31,7 @@ public class Escudo extends ItemDecorator {
 	}
 
 	/**
-	 * Imprime el estado del personaje con sus item
+	 * Imprime el estado del personaje
 	 * */
 	public String toString() {
 		return getUnidad() + ", Escudo";
