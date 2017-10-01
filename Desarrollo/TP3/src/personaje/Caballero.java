@@ -1,5 +1,8 @@
 package personaje;
-
+/**
+ * @author adrian
+ *
+ */
 public class Caballero  extends Unidad{
 	private static final int SALUD = 200;
 	private static final int ENERGIA = 3;

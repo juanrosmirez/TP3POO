@@ -7,10 +7,7 @@ import org.junit.Test;
 import item.Capa;
 import item.Escudo;
 import item.Puñal;
-/**
- * @author adrian
- *
- */
+
 public class SoldadoTest {
 	private final double ATAQUE = 10;
 	private final double SALUD = 200;

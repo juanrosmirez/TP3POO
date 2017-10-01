@@ -1,9 +1,6 @@
 package personaje;
 
-/**
- * @author adrian
- *
- */
+
 public class Arquero extends Unidad {
 	private static final int SALUD = 50;
 	private static final int ENERGIA = 20;

@@ -1,5 +1,8 @@
 package personaje;
-
+/**
+ * @author adrian
+ *
+ */
 public class Lancero  extends Unidad{
 	private static final int SALUD = 150;
 	private static final int ENERGIA = 1;

@@ -1,8 +1,5 @@
 package personaje;
-/**
- * @author adrian
- *
- */
+
 public abstract class Unidad {
 
 	private static int count = 0;

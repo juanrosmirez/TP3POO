@@ -1,17 +1,14 @@
 package personaje;
 
-/**
- * @author adrian
- *
- */
-public class Arquero extends Unidad {
-	private static final int SALUD = 50;
-	private static final int ENERGIA = 20;
-	private static final int ATAQUE = 5;
+public class Soldado extends Unidad{
+
+	private static final int SALUD = 200;
+	private static final int ENERGIA = 100;
+	private static final int ATAQUE = 10;
 	private static final int DEFENSA = 1;
 	
-	public Arquero(int posicion) {
-		super(SALUD, posicion,ENERGIA);
+	public Soldado(int posicion){
+		super(SALUD,posicion,ENERGIA);
 	}
 
 	@Override
@@ -23,11 +20,11 @@ public class Arquero extends Unidad {
 	public double getDefensa() {
 		return DEFENSA;
 	}
-	
+
 	@Override
-	public boolean puedoAtacar(Unidad u) {
+	public boolean puedoAtacar(Unidad u){
 		int distancia = Math.abs(this.getPosicion() - u.getPosicion() );
-		return super.puedoAtacar(u) && distancia >= 2 && distancia <= 5 ;
+		return super.puedoAtacar(u) && distancia ==0;
 	}
 
 	@Override
@@ -37,16 +34,10 @@ public class Arquero extends Unidad {
 
 	@Override
 	public void restaurarEnergia() {
-		if(!puedeRestauraEnergia())
-			return;
-		
-		int e = super.getEnergia() + 6;
-		if(e > ENERGIA)
-			e = ENERGIA;
-		super.setEnergia(e);
-		
+		if(puedeRestauraEnergia())
+			super.setEnergia(ENERGIA);
 	}
-	
+
 	@Override
 	public double getAtaqueBase() {
 		return ATAQUE;
@@ -54,17 +45,20 @@ public class Arquero extends Unidad {
 
 	@Override
 	public double getDefensaBase() {
+		// TODO Auto-generated method stub
 		return DEFENSA;
 	}
-
-	@Override
-	public double getGastoEnergetico() {
-		return 1;
-	}
+	
 	@Override
 	public int getEnergiaMaxima() {
 		// TODO Auto-generated method stub
 		return ENERGIA;
 	}
+
+	@Override
+	public double getGastoEnergetico() {
+		return 10;
+	}
+
 	
 }

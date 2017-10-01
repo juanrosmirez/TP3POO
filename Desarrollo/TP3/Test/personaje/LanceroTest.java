@@ -9,7 +9,10 @@ import org.junit.Test;
 import item.Capa;
 import item.Escudo;
 import item.Puñal;
-
+/**
+ * @author adrian
+ *
+ */
 public class LanceroTest {
 
 	private final double ATAQUE = 25;

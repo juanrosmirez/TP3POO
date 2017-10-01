@@ -1,5 +1,8 @@
 package personaje;
-
+/**
+ * @author adrian
+ *
+ */
 public class Soldado extends Unidad{
 
 	private static final int SALUD = 200;

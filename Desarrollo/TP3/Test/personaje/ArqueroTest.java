@@ -7,7 +7,10 @@ import org.junit.Test;
 import item.Capa;
 import item.Escudo;
 import item.Puñal;
-
+/**
+ * @author adrian
+ *
+ */
 public class ArqueroTest {
 	private final double ATAQUE = 5;
 	private final double SALUD = 50;

@@ -5,24 +5,24 @@ import personaje.Unidad;
  * @author adrian
  *
  */
-public class Puñal extends ItemDecorator {
+public class Escudo extends ItemDecorator {
 	
-	public Puñal(Unidad peleable){
+	public Escudo(Unidad peleable){
 		super(peleable);
 	}
 	public double getAtaque(){
-		return getPeleable().getAtaque()+3;
+		return getPeleable().getAtaque();
 	}
 	public int getEnergia(){
 		return getPeleable().getEnergia();
 	}
 	public double getDefensa(){
-		return getPeleable().getDefensa()-3;
+		return getPeleable().getDefensa() +  getPeleable().getDefensaBase()*0.4;
 	}
 	public boolean puedeRestauraEnergia() {
 		return getPeleable().puedeRestauraEnergia();
 	}
-	
+
 
 	@Override
 	public double getAtaqueBase() {
