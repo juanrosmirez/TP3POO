@@ -40,7 +40,7 @@ public class Capa extends ItemDecorator {
 	/**
 	 * Devuelve la energia que se tiene portando una capa
 	 * */
-	public int getEnergia(){
+	public double getEnergia(){
 		return getUnidad().getEnergia() * MULTIPLICADOR_ENERGIA;
 	}
 	
@@ -64,7 +64,7 @@ public class Capa extends ItemDecorator {
 	 * Modifica la enegia de la unidad tras realizar una accion que le consume energia
 	 * */
 	public void consumirEnergia(){
-		this.setEnergia(getUnidad().getEnergia() - (int)getGastoEnergetico()) ;
+		this.setEnergia(getUnidad().getEnergia() - (double)getGastoEnergetico()) ;
 	}
 	
 

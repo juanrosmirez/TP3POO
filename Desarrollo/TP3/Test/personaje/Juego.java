@@ -7,6 +7,15 @@ import item.Punial;
 public class Juego {
 
 	public static void main(String[] args) {
+		Unidad u = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Capa(atacante);
+		atacante.atacar(u);
+		System.out.println(atacante.getGastoEnergetico());
+		
+		
+		
+		
 		Unidad unidad = new Soldado(0);
 		Unidad victima = new Soldado(0);
 	

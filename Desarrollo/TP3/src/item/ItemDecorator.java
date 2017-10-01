@@ -91,10 +91,10 @@ public abstract class ItemDecorator extends Unidad {
 		this.unidad.setSalud(salud);		
 	}
 	/**Accede a la unidad decorada para modificar su energia
-	 * @param energia
+	 * @param d
 	 */
-	public void setEnergia(int energia) {
-		this.unidad.setEnergia(energia);		
+	public void setEnergia(double d) {
+		this.unidad.setEnergia(d);		
 	}
 
 	/**Accede a la unidad decorada y Evalua si es posible restaurar la energia 
@@ -137,7 +137,7 @@ public abstract class ItemDecorator extends Unidad {
 
 	/**Accede a la unidad decorada y devuelve la energia actual de la unidad considerando los items que porta
 	 */
-	public int getEnergia() {
+	public double getEnergia() {
 
 		return this.unidad.getEnergia();
 	}

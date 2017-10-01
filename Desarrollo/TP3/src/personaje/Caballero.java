@@ -39,7 +39,7 @@ public class Caballero  extends Unidad{
 		if(!puedeRestauraEnergia())
 			return;
 		
-		int e = super.getEnergia()+3;
+		double e = super.getEnergia()+3;
 		if(e>ENERGIA)
 			e= ENERGIA;
 		super.setEnergia(e);

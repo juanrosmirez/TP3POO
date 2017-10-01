@@ -40,7 +40,7 @@ public class Arquero extends Unidad {
 		if(!puedeRestauraEnergia())
 			return;
 		
-		int e = super.getEnergia() + 6;
+		double e = super.getEnergia() + 6;
 		if(e > ENERGIA)
 			e = ENERGIA;
 		super.setEnergia(e);

@@ -40,7 +40,7 @@ public abstract class Unidad {
 	
 	private int posicion;
 	private double salud;
-	private int energia;
+	private double energia;
 		
 	protected Unidad(int salud, int posicion,int energia){
 		this.salud = salud;
@@ -125,13 +125,13 @@ public abstract class Unidad {
 	/**Devuelve la energia actual de la unidad
 	 * @return valor respresentativo de la energia actual
 	 */
-	public int getEnergia(){
+	public double getEnergia(){
 		return energia;
 	}
 
 	/**Modifica la energia de la unidad
 	 */
-	public void setEnergia(int d) {
+	public void setEnergia(double d) {
 		this.energia = d;	
 	}
 

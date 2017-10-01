@@ -56,7 +56,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) ,- 3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -111,7 +111,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
 					Double.compare(unidad.getEnergia(),  ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 10*.4 + 3 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , 10*.4 - 3 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -125,7 +125,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
 					Double.compare(unidad.getEnergia(),  ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 10* .4 + 3 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , 10* .4 - 3 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -139,7 +139,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -153,7 +153,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) ,- 3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -168,7 +168,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*0.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*0.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -183,7 +183,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*0.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*0.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -198,7 +198,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -213,7 +213,7 @@ public class LanceroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -325,4 +325,7 @@ public class LanceroTest {
 	
 		
 	}
+	
+	
+	
 }

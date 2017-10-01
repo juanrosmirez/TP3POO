@@ -16,6 +16,7 @@ public class ArqueroTest {
 	private final double SALUD = 50;
 	private final double ENERGIA = 20;
 	private final double DEFENSA = 0;
+	private final double ENERGIA_CONSUMIDA = 1;
 
 	private Unidad unidad;
 	
@@ -54,7 +55,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -109,7 +110,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
 					Double.compare(unidad.getEnergia(),  ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 10*.4 + 3 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , 10*.4 - 3 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -123,7 +124,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),   ATAQUE + 3 )   == 0 && 
 					Double.compare(unidad.getEnergia(),  ENERGIA)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 10* .4 + 3 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , 10* .4- 3 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -137,7 +138,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -151,7 +152,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE +3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3)   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3)   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -166,7 +167,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*0.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*0.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -181,7 +182,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*0.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*0.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -196,7 +197,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*0.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -211,7 +212,7 @@ public class ArqueroTest {
 					Double.compare(unidad.getPosicion(), 1)   == 0 &&
 					Double.compare(unidad.getAtaque(),  ATAQUE + 3 - ATAQUE*.1)   == 0 && 
 					Double.compare(unidad.getEnergia(), ENERGIA * 2)  == 0 &&
-					Double.compare(unidad.getDefensa(10) , 3 + 10*.4 )   == 0 && 
+					Double.compare(unidad.getDefensa(10) , -3 + 10*.4 )   == 0 && 
 					Double.compare(unidad.getSalud(),    SALUD) == 0
 				  );
 	}	
@@ -351,6 +352,132 @@ public class ArqueroTest {
 		}
 		assertEquals(unidad.atacar(victima), 0, 0.1);
 		
+	}
+	
+	/////////////
+	@Test
+	public void baseAtacadoPorArqueroBase(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
+	}
+	@Test
+	public void baseAtacadoPorArqueroConEscudo(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Escudo(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - ATAQUE);
+	}
+	@Test
+	public void baseAtacadoPorArqueroConPunial(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Punial(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE +3));
+	}
+	@Test
+	public void baseAtacadoPorArqueroConCapa(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Capa(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*.1));
+	}
+	@Test
+	public void baseAtacadoPorArqueroConEscudoYPunial(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Escudo(atacante);
+		atacante = new Punial(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE + 3));
+	}
+	@Test
+	public void baseAtacadoPorArqueroConEscudoYCapa(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Escudo(atacante);
+		atacante = new Capa(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*.1));
+	}
+	@Test
+	public void baseAtacadoPorArqueroConCapaYPunial(){
+		unidad = new Arquero(0);
+		Unidad atacante = new Arquero(3);
+		atacante = new Capa(atacante);
+		atacante = new Punial(atacante);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == SALUD - (ATAQUE - ATAQUE*0.1 + 3));
+	}
+
+	
+	
+	//////
+	@Test
+	public void conEscudoAtacadoPorArqueroBase(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante = new Arquero(3);
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - (ATAQUE-ATAQUE*0.4)));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConEscudo(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Escudo(new Arquero(3));
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - (ATAQUE-ATAQUE*0.4)));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConPunial(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Punial(new Arquero(3));
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - ((ATAQUE+3)-(ATAQUE+3)*.4)));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConCapa(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Capa(new Arquero(3));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1; 
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConEscudoYPunial(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Escudo(new Punial(new Arquero(3)));
+		atacante.atacar(unidad);
+		assertTrue(atacante.getEnergia() == ENERGIA - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - ((ATAQUE+3)-(ATAQUE+3)*.4)));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConEscudoYCapa(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Escudo(new Capa(new Arquero(3)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1; 
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
+	}
+	
+	@Test
+	public void conEscudoAtacadoPorArqueroConCapaYPunial(){
+		unidad = new Escudo(new Arquero(0));
+		Unidad atacante =  new Capa(new Punial(new Arquero(3)));
+		atacante.atacar(unidad);
+		double valorAtaque = ATAQUE - ATAQUE*.1; 
+		valorAtaque+=3;
+		valorAtaque = valorAtaque - valorAtaque*.4;
+		assertTrue(atacante.getEnergia() == ENERGIA*2 - ENERGIA_CONSUMIDA && unidad.getSalud() == (SALUD - valorAtaque));
 	}
 	
 	
