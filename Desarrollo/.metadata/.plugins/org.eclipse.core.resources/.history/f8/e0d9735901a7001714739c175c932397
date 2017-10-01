@@ -8,11 +8,22 @@ public class Juego {
 
 	public static void main(String[] args) throws Exception {
 		
+		Unidad t = new Soldado(0);
+		System.out.println(t.getCharItem());
+		t = new Escudo(t);
+		System.out.println(t.getCharItem());
+		t = new Capa(t);
+		System.out.println(t.getCharItem());
+		t = new Punial(t);
+		System.out.println(t.getCharItem());
+		
 		Unidad u = new Arquero(0);
 		Unidad atacante = new Arquero(3);
 		atacante = new Capa(atacante);
 		atacante.atacar(u);
 		System.out.println(atacante.getGastoEnergetico());
+		
+		
 		
 		
 		Unidad unidad = new Soldado(0);
