@@ -100,10 +100,10 @@ public abstract class Unidad {
 		return salud;
 	}
 
-	public  void retroceder() {
+	public final void retroceder() {
 		this.posicion--;
 	}
-	public void avanzar() {
+	public final void avanzar() {
 		this.posicion++;
 	}
 

@@ -85,10 +85,4 @@ public abstract class ItemDecorator extends Unidad {
 		this.unidad.restaurarEnergia();
 	}
 
-	public void avanzar(){
-		this.unidad.avanzar();
-	}
-	public void retroceder(){
-		this.unidad.retroceder();
-	}
 }

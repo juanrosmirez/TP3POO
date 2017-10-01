@@ -29,12 +29,6 @@ public class Lancero  extends Unidad{
 		return super.puedoAtacar(u) && distancia >= 1 && distancia <= 3 ;
 	}
 
-
-	@Override
-	public void restaurarEnergia() {
-	}
-
-	
 	@Override
 	public boolean puedeRestauraEnergia() {
 		return false;

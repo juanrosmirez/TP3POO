@@ -81,12 +81,15 @@ public abstract class Unidad {
 	public abstract int getEnergiaMaxima();
 	
 	public boolean puedeRestauraEnergia(){
+		System.out.println(energia);
 		if(energia < getEnergiaMaxima())
 			return true;
 		return false;
 	}
 	
-	public abstract void restaurarEnergia();
+	public void restaurarEnergia(){
+		
+	}
 	
 	public int getEnergia(){
 		return energia;
@@ -100,10 +103,10 @@ public abstract class Unidad {
 		return salud;
 	}
 
-	public  void retroceder() {
+	public final void retroceder() {
 		this.posicion--;
 	}
-	public void avanzar() {
+	public final void avanzar() {
 		this.posicion++;
 	}
 

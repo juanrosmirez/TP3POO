@@ -12,10 +12,12 @@ import personaje.Unidad;
  *<ul>
  *		<li>getAtaque()</li>
  *		<li>getEnergia()</li>
+ *		<li>getDefensa()</li>
+ *		<li>puedeRestauraEnergia()</li>
+ *		<li>getAtaqueBase()</li>
+ *		<li>getDefensaBase()</li>
  *		<li>getGastoEnergetico()</li>
  *		<li>getEnergiaMaxima()</li>
- *		<li>consumirEnergia()</li>
- *		<li>toString()</li>
  *</ul>
  *@see item.ItemDecorator
  *@see personaje.Unidad

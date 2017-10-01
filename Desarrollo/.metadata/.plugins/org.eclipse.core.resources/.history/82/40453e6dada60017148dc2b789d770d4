@@ -32,8 +32,6 @@ public class Juego {
 
 		System.out.println("resultado mover");
 		unidad.avanzar();
-		unidad.avanzar();
-		unidad.avanzar();
 		System.out.println(unidad);
 		
 
