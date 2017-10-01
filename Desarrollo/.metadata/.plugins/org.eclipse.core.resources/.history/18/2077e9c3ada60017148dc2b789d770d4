@@ -11,8 +11,6 @@ public class Juego {
 		Unidad victima = new Soldado(0);
 	
 		unidad = new Capa(unidad);
-		victima = new Puñal(victima);
-		victima = new Escudo(victima);
 		
 		System.out.println(unidad);
 		System.out.println(victima);
@@ -40,14 +38,6 @@ public class Juego {
 		System.out.println("resultado mover");
 		unidad.retroceder();
 		System.out.println(unidad);
-		
-
-		System.out.print("Unidad con vida: ");
-		System.out.println(unidad.conVida());
-		
-		System.out.print("Victima con vida: ");
-		System.out.println(victima.conVida());
-		
 		
 	}
 }

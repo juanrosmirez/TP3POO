@@ -41,13 +41,5 @@ public class Juego {
 		unidad.retroceder();
 		System.out.println(unidad);
 		
-
-		System.out.print("Unidad con vida: ");
-		System.out.println(unidad.conVida());
-		
-		System.out.print("Victima con vida: ");
-		System.out.println(victima.conVida());
-		
-		
 	}
 }
