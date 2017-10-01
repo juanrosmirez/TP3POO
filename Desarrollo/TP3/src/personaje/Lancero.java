@@ -7,7 +7,7 @@ public class Lancero  extends Unidad{
 	private static final int SALUD = 150;
 	private static final int ENERGIA = 1;
 	private static final int ATAQUE = 25;
-	private static final int DEFENSA = 1;
+	private static final int DEFENSA = 0;
 
 	public Lancero(int posicion){
 		super(SALUD,posicion,ENERGIA);

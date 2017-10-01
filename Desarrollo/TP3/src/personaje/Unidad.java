@@ -62,7 +62,6 @@ public abstract class Unidad {
 	
 	public final double recibirDanio(double valor){
 		double valorAtaqueFinal = valor - getDefensa(valor);
-		System.out.println(valorAtaqueFinal);
 		if(valorAtaqueFinal < 0 )
 			valorAtaqueFinal = 0;
 		

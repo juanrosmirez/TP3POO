@@ -8,7 +8,7 @@ public class Arquero extends Unidad {
 	private static final int SALUD = 50;
 	private static final int ENERGIA = 20;
 	private static final int ATAQUE = 5;
-	private static final int DEFENSA = 1;
+	private static final int DEFENSA = 0;
 	
 	public Arquero(int posicion) {
 		super(SALUD, posicion,ENERGIA);

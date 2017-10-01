@@ -10,7 +10,7 @@ public class Juego {
 		Unidad unidad = new Soldado(0);
 		Unidad victima = new Soldado(0);
 	
-		//unidad = new Capa(unidad);
+		unidad = new Capa(unidad);
 		victima = new Puñal(victima);
 		victima = new Escudo(victima);
 		
@@ -18,7 +18,7 @@ public class Juego {
 		System.out.println(victima);
 		
 		unidad.atacar(victima);
-		//victima.atacar(unidad);
+		victima.atacar(unidad);
 
 		System.out.println("resultado ataque");
 		System.out.println(unidad);
